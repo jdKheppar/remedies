@@ -1,17 +1,22 @@
 let hamburger = document.getElementById("hamburger-icon");
 let burger = document.getElementById("burger");
+let healthGoal = document.getElementById("hamburger-health-goal-inner");
+let productType = document.getElementById("hamburger-product-type-inner");
 
 burger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
+  if (hamburger.classList.contains("open")) {
+    hamburger.classList.remove("open");
+    healthGoal.style.display = "none";
+    productType.style.display = "none";
+  } else {
+    hamburger.classList.add("open");
+  }
 });
 
-bar2.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-});
-
-bar3.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-});
+// For reference, there also exists a toggle function
+// burger.addEventListener("click", () => {
+//   hamburger.classList.toggle("open");
+// });
 
 window.onscroll = function () {
   // Check if the hamburger has the "open" class
@@ -79,30 +84,25 @@ function showSlides(n) {
 // // For handling click on hamburger inner icons
 
 function hamburgerInner(n) {
-  let btns = document.getElementsByClassName("hamburger-dropbtn");
-  let hr = document.getElementsByClassName("hamburger-hr");
+  let mobileMenu = document.getElementById("mobile-menu");
 
-  for (let i = 0; i < btns.length; i++) {
-    if (btns[i] && btns[i].style) {
-      btns[i].style.display = "none";
-    }
-    if (hr[i] && hr[i].style) {
-      hr[i].style.display = "none";
-    }
-  }
   if (n == 1) {
-    let healthGoal = document.getElementById("hamburger-health-goal-inner");
+    mobileMenu.style.display = "none";
+
     healthGoal.style.display = "flex";
+    healthGoal.style.flexDirection = "column";
     healthGoal.style.color = "#2e6e66";
     console.log("Hamburger Clikced");
   }
   if (n == 2) {
-    let healthGoal = document.getElementById("hamburger-product-type-inner");
-    healthGoal.style.display = "flex";
-    healthGoal.style.color = "#2e6e66";
-    console.log("Hamburger Clikced");
+    mobileMenu.style.display = "none";
+
+    productType.style.display = "flex";
+    productType.style.flexDirection = "column";
+    productType.style.color = "#2e6e66";
   }
   if (n == 3) {
+    mobileMenu.style.display = "none";
     let healthGoal = document.getElementById("hamburger-brands-inner");
     healthGoal.style.display = "flex";
     healthGoal.style.color = "#2e6e66";
