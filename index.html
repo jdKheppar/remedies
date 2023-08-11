@@ -1,860 +1,845 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Remedies</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="top-navbar">
-        <p class="top-navbar-para">
-          50% off all products for the next few days. Hurry!
-        </p>
-        <div class="top-navbar-icons">
-          <img
-            class="top-navbar-icon-insta"
-            src="./assets/icons/instagram.png"
-            alt="insta"
-          />
-          <img
-            class="top-navbar-icon-fb"
-            src="./assets/icons/facebook-app-symbol.png"
-            alt="insta"
-          />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remedies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="top-navbar">
+      <p class="top-navbar-para">
+        50% off all products for the next few days. Hurry!
+      </p>
+      <div class="top-navbar-icons">
+        <img class="top-navbar-icon-insta" src="./assets/icons/instagram.png" alt="insta" />
+        <img class="top-navbar-icon-fb" src="./assets/icons/facebook-app-symbol.png" alt="insta" />
+      </div>
+    </div>
+    <div class="nav" id="nav">
+      <div class="main-navbar">
+        <div class="main-navbar-logoPsearch">
+          <img class="main-navbar-main-logo" src="./assets/icons/remedies.png" alt="Remedies" />
+          <div class="main-navbar-searchPbtn">
+            <input type="text" placeholder="  Search by products, brands or health goals" class="main-navbar-input" />
+            <button class="main-navbar-btn">
+              <img class="main-navbar-search-icon" src="./assets/icons/icons8-search-30.png" alt="search" />
+            </button>
+            <button class="main-navbar-close">
+              <img src="./assets/icons/close.png" alt="close" class="main-navbar-img-close" />
+            </button>
+          </div>
+        </div>
+
+        <div class="main-navbar-cart">
+          <img src="./assets/icons/shopping-cart.png" alt="CART" class="main-navbar-cart-icon" />
+          <p class="main-navbar-cart-para">CART</p>
+        </div>
+        <div id="hamburger-icon">
+          <div id="burger">
+            <div class="bar1" id="bar1"></div>
+            <div class="bar2" id="bar2"></div>
+            <div class="bar3" id="bar3"></div>
+          </div>
+
+          <div class="mobile-veiw-container">
+            <div class="mobile-menu">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper">
+                  <p>Home</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+              </div>
+              <hr class="hamburger-hr">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper" onclick="hamburgerInner(1)">
+                  <p>Health Goal</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+
+              </div>
+              <hr class="hamburger-hr">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper" onclick="hamburgerInner(2)">
+                  <p>Product Type</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+                <div id="hamburger-product-type-inner">
+                  <h2>Product Type</h2>
+                  <p>View All</p>
+                  <p>Immune Boosters</p>
+                  <p>Digestive</p>
+                  <p>Mood And Anxiety</p>
+                  <p>Sleep</p>
+                  <p>Heart Health</p>
+                  <p>All Products</p>
+                </div>
+              </div>
+              <hr class="hamburger-hr">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper" onclick="hamburgerInner(3)">
+                  <p>Brands</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+                <div id="hamburger-brands-inner">
+                  <h2>Brands</h2>
+                  <p>View All</p>
+                  <p>Immune Boosters</p>
+                  <p>Digestive</p>
+                  <p>Mood And Anxiety</p>
+                  <p>Sleep</p>
+                  <p>Heart Health</p>
+                  <p>All Products</p>
+                </div>
+              </div>
+              <hr class="hamburger-hr">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper">
+                  <p>New Year's Starter Kit</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+              </div>
+              <hr class="hamburger-hr">
+              <div class="hamburger-dropdown">
+                <button class="hamburger-dropbtn upper">
+                  <p>Visit Our Store</p>
+                  <img class="greater-than" src="./assets/icons/greater-than.png" alt="greater than" />
+                </button>
+              </div>
+
+              <div id="hamburger-health-goal-inner">
+                <h2>Health Goal</h2>
+                <p>View All</p>
+                <p>Immune Boosters</p>
+                <p>Digestive</p>
+                <p>Mood And Anxiety</p>
+                <p>Sleep</p>
+                <p>Heart Health</p>
+                <p>All Products</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
-      <div class="nav" id="nav">
-        <div class="main-navbar">
-          <div class="main-navbar-logoPsearch">
-            <img
-              class="main-navbar-main-logo"
-              src="./assets/icons/remedies.png"
-              alt="Remedies"
-            />
-            <div class="main-navbar-searchPbtn">
-              <input
-                type="text"
-                placeholder="     Search by products, brands or health goals"
-                class="main-navbar-input"
-              />
-              <button class="main-navbar-btn">
-                <img
-                  class="main-navbar-search-icon"
-                  src="./assets/icons/icons8-search-30.png"
-                  alt="search"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="main-navbar-cart">
-            <img
-              src="./assets/icons/shopping-cart.png"
-              alt="CART"
-              class="main-navbar-cart-icon"
-            />
-            <p class="main-navbar-cart-para">CART</p>
-          </div>
-        </div>
-        <hr id="header-hr" />
-        <div class="main-dropdown" id="main-dropdown">
-          <div id="hamburger-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper">
-                    <p>Tools</p>
-                    <img
-                      src="./images/greater-than-symbol.png"
-                      alt="greater than"
-                    />
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="#">commander </a>
-                    <a href="#">ranger</a>
-                    <a href="#">talons</a>
-                    <a href="#">gift card</a>
+      <hr id="header-hr" />
+      <div class="main-dropdown" id="main-dropdown">
+        <div class="main-toolbar upper">
+          <ul>
+            <li>
+              <div class="dropdown dropdown-trans">
+                <button id="dropdown-unchanged" class="dropbtn upper">
+                  home
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn upper dropdown-white">
+                  health goal
+                </button>
+                <div class="dropdown-content">
+                  <div class="health-goal-left">
+                    <h3 class="health-goal-h3">Immune Boosters</h3>
+                    <p class="health-goal-p">Alpha Lipoic Acid</p>
+                    <p class="health-goal-p">Zinc Chelate</p>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">digestive</h3>
+                    <p class="health-goal-p">DBR Hiatal Health</p>
+                    <p class="health-goal-p">Baxyl</p>
+                    <h3 class="health-goal-h3">Mood And Anxiety</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <p class="health-goal-p">DBR Emotional Ease</p>
+                    <p class="health-goal-p">Choline &amp; Inositol Caps</p>
+                    <p class="health-goal-p">ŐSI MAGNESIUM Oil</p>
+                    <h3 class="health-goal-h3">Sleep</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">Heart Health</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <p class="health-goal-p">Hylands- Restful Legs</p>
+                    <p class="health-goal-p">Co Enzyme Q10</p>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">All Products</h3>
+                  </div>
+                  <div class="health-goal-right">
+                    <img src="./assets/imgs/dropdown/1.png" alt="one" class="health-goal-img" /><img
+                      src="./assets/imgs/dropdown/2.png" alt="two" class="health-goal-img" />
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper">limited edition</button>
-                  <div class="dropdown-content">
-                    <a href="#">ripper series 2023</a>
-                    <a href="#"
-                      >ripper series 2022 <br />
-                      (sold out)
-                    </a>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn upper dropdown-white">
+                  product type
+                </button>
+                <div class="dropdown-content">
+                  <div class="health-goal-left">
+                    <h3 class="health-goal-h3">Herbs</h3>
+                    <p class="health-goal-p">Alpha Lipoic Acid</p>
+                    <p class="health-goal-p">Zinc Chelate</p>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">digestive</h3>
+                    <p class="health-goal-p">DBR Hiatal Health</p>
+                    <p class="health-goal-p">Baxyl</p>
+                    <h3 class="health-goal-h3">Vitamins</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <p class="health-goal-p">DBR Emotional Ease</p>
+                    <p class="health-goal-p">Choline &amp; Inositol Caps</p>
+                    <p class="health-goal-p">ŐSI MAGNESIUM Oil</p>
+                    <h3 class="health-goal-h3">Minerals</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">Heart Health</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <p class="health-goal-p">Hylands- Restful Legs</p>
+                    <p class="health-goal-p">Co Enzyme Q10</p>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">All Products</h3>
+                  </div>
+                  <div class="health-goal-right">
+                    <img src="./assets/imgs/dropdown/1.png" alt="one" class="health-goal-img" /><img
+                      src="./assets/imgs/dropdown/2.png" alt="two" class="health-goal-img" />
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper">apparel</button>
-                  <div class="dropdown-content">
-                    <a href="#">shirts</a>
-                    <a href="#">hats </a>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn upper dropdown-white">brands</button>
+                <div class="dropdown-content">
+                  <div class="health-goal-left">
+                    <h3 class="health-goal-h3">Dr Bary's</h3>
+                    <p class="health-goal-p">Alpha Lipoic Acid</p>
+                    <p class="health-goal-p">Zinc Chelate</p>
+                    <h3 class="health-goal-h3">Tery Naturally</h3>
+                    <h3 class="health-goal-h3">Natural Factors</h3>
+                    <p class="health-goal-p">DBR Hiatal Health</p>
+                    <p class="health-goal-p">Baxyl</p>
+                    <h3 class="health-goal-h3">Mood And Anxiety</h3>
+                    <h3 class="health-goal-h3">Now</h3>
+                    <p class="health-goal-p">DBR Emotional Ease</p>
+                    <p class="health-goal-p">Choline &amp; Inositol Caps</p>
+                    <p class="health-goal-p">ŐSI MAGNESIUM Oil</p>
+                    <h3 class="health-goal-h3">Enzymedica</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <h3 class="health-goal-h3">Heart Health</h3>
+                    <h3 class="health-goal-h3">Shop All</h3>
+                    <p class="health-goal-p">Hylands- Restful Legs</p>
+                    <p class="health-goal-p">Co Enzyme Q10</p>
+                    <h3 class="health-goal-h3">All Brands</h3>
+                    <h3 class="health-goal-h3">All Products</h3>
+                  </div>
+                  <div class="health-goal-right">
+                    <img src="./assets/imgs/dropdown/1.png" alt="one" class="health-goal-img" /><img
+                      src="./assets/imgs/dropdown/2.png" alt="two" class="health-goal-img" />
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper">About US</button>
-                  <div class="dropdown-content">
-                    <a href="#">who we are</a>
-                    <a href="#">faq </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="main-toolbar upper">
-            <ul>
-              <li>
-                <div class="dropdown">
-                  <button id="dropdown-unchanged" class="dropbtn upper">
-                    home
-                  </button>
-                </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper bg-white">health goal</button>
-                  <div class="dropdown-content">
-                    <div class="health-goal">
-                      <h3 class="health-goal-h3">Immune Boosters</h3>
-                      <p class="health-goal-p">Alpha Lipoic Acid</p>
-                      <p class="health-goal-p">Zinc Chelate</p>
-                      <h3 class="health-goal-h3">Shop All</h3>
-                      <h3 class="health-goal-h3">digestive</h3>
-                      <p class="health-goal-p">DBR Hiatal Health</p>
-                      <p class="health-goal-p">Baxyl</p>
-                      <h3 class="health-goal-h3">Mood And Anxiety</h3>
-                      <h3 class="health-goal-h3">Shop All</h3>
-                      <p class="health-goal-p">DBR Emotional Ease</p>
-                      <p class="health-goal-p">Choline &amp; Inositol Caps</p>
-                      <p class="health-goal-p">ŐSI MAGNESIUM Oil</p>
-                      <h3 class="health-goal-h3">Sleep</h3>
-                      <h3 class="health-goal-h3">Shop All</h3>
-                      <h3 class="health-goal-h3">Heart Health</h3>
-                      <h3 class="health-goal-h3">Shop All</h3>
-                      <p class="health-goal-p">Hylands- Restful Legs</p>
-                      <p class="health-goal-p">Co Enzyme Q10</p>
-                      <h3 class="health-goal-h3">Shop All</h3>
-                      <h3 class="health-goal-h3">All Products</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper bg-white">product type</button>
-                  <div class="dropdown-content">
-                    <a href="#">shirts</a>
-                    <a href="#">hats </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper bg-white">brands</button>
-                  <div class="dropdown-content">
-                    <a href="#">who we are</a>
-                    <a href="#">faq </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="dropbtn upper dropdown-unchanged">
-                    new year's starter kit
-                  </button>
-                </div>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button
-                    id="dropdown-noUnderline"
-                    class="dropbtn upper dropdown-unchanged"
-                  >
-                    FAST, FREE SHIPPING OVER $49
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown dropdown-trans">
+                <button class="dropbtn upper dropdown-unchanged">
+                  new year's starter kit
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown dropdown-trans" id="shipping">
+                <button id="dropdown-noUnderline" class="dropbtn upper dropdown-unchanged">
+                  <img src="./assets/icons/navShip.svg" alt="navship">
+                  FAST, FREE SHIPPING OVER $49
+                </button>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <img class="main-img" src="./assets/imgs/mainHome.webp" alt="main img" />
-      <div class="sections">
-        <section class="section1">
-          <div class="section1-head">
-            <h1 class="upper">shop by category</h1>
-            <h3>view all</h3>
+  <main>
+    <img class="main-img" src="./assets/imgs/mainHome.webp" alt="main img" />
+    <div class="sections">
+      <section class="section1">
+        <div class="section1-head">
+          <h1 class="section1-heading">Shop By Category</h1>
+          <h3 class="underline">view all</h3>
+        </div>
+        <div class="section1-new-grid">
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/moodSupport.jpg" />
+            <p class="collection-item__title">Mood Support</p>
           </div>
-          <div class="new-grid" data-view="6-3">
-            <div class="grid-item">
-              <img class="section1-img" src="./assets/imgs/moodSupport.jpg" />
-              <p class="collection-item__title">Mood Support</p>
-            </div>
-            <div class="grid-item">
-              <img class="section1-img" src="./assets/imgs/immuneHealth.jpg" />
-              <p class="collection-item__title">Immune Health</p>
-            </div>
-            <div class="grid-item">
-              <img class="section1-img" src="./assets/imgs/sleep.jpg" />
-              <p class="collection-item__title">Sleep</p>
-            </div>
-            <div class="grid-item">
-              <img
-                class="section1-img"
-                src="./assets/imgs/digestiveHealth.jpg"
-              />
-              <p class="collection-item__title">Digestive Health</p>
-            </div>
-            <div class="grid-item">
-              <img class="section1-img" src="./assets/imgs/pain.jpg" />
-              <p class="collection-item__title">Pain</p>
-            </div>
-            <div class="grid-item">
-              <img class="section1-img" src="./assets/imgs/heartHealth.png" />
-              <p class="collection-item__title">Heart Health</p>
-            </div>
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/immuneHealth.jpg" />
+            <p class="collection-item__title">Immune Health</p>
           </div>
-        </section>
-        <section class="section2">
-          <img
-            class="section2-img"
-            src="./assets/imgs/digestion_issues.png"
-            alt="digestion"
-          />
-          <img
-            class="section2-img"
-            src="./assets/imgs/immunity_boost.png"
-            alt="immunity"
-          />
-        </section>
-        <section class="section3">
-          <div class="section1-head">
-            <h1 class="upper">Heart Health</h1>
-            <h3>view all</h3>
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/sleep.jpg" />
+            <p class="collection-item__title">Sleep</p>
           </div>
-          <div class="section3-new-grid" data-view="6-3">
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/coenzyme.png"
-                alt="coenzyme"
-                class="section3-card-img"
-              />
-              <h2 class="section3-heading">
-                Natural Factors- Coenzyme Q10- 100 mg- 60 Soft Gels
-              </h2>
-              <p class="section3-benefit">Natural Factors</p>
-              <h2 class="section3-price">$2295</h2>
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/digestiveHealth.jpg" />
+            <p class="collection-item__title">Digestive Health</p>
+          </div>
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/pain.jpg" />
+            <p class="collection-item__title">Pain</p>
+          </div>
+          <div class="section1-grid-item">
+            <img class="section1-img" src="./assets/imgs/heartHealth.png" />
+            <p class="collection-item__title">Heart Health</p>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="section2-container">
+          <div class="section2-img">
+            <img class="section2-img-item" src="./assets/imgs/digestion_issues.png" alt="digestion" />
+          </div>
+          <div class="section2-img">
+            <img class="section2-img-item" src="./assets/imgs/immunity_boost.png" alt="immunity" />
+          </div>
+        </div>
+      </section>
+      <section class="section3_5" id="section3_5">
+        <div class="section3_5-head">
+          <h1 class="upper">Heart Health</h1>
+          <h3>view all</h3>
+        </div>
+        <div class="section3_5-new-flex">
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <div class="section3_5-flex-item-img">
+
+              <img src="./assets/imgs/coenzyme.png" alt="coenzyme" class="section3_5-card-img coenzyme" />
             </div>
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/seleno.png"
-                alt="seleno"
-                class="section3-card-img"
-              />
-              <h2 class="section3-heading">
-                Natural Factors- SelenoExcell Selenium- 200 mcg- 90 Capsules
-              </h2>
-              <p class="section3-benefit">Natural Factors</p>
-              <h2 class="section3-price">$1395</h2>
+            <h4 class="section3_5-heading">
+              Natural Factors- Coenzyme Q10- 100 mg- 60 Soft Gels
+            </h4>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h3 class="section3_5-price">$2295</h3>
+
+          </div>
+          <div class="section3_5-flex-item seleno-cont">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+
+
+            <div class="section3_5-flex-item-img">
+
+              <img src="./assets/imgs/seleno.png" alt="seleno" class="section3_5-card-img seleno" />
+              <p class="sold-out">SOLD OUT</p>
             </div>
 
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/k2.png"
-                alt="k2"
-                class="section3-card-img"
-              />
-              <h2 class="section3-heading">
-                Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian Capsules
-              </h2>
-              <p class="section3-benefit">Natural Factors</p>
-              <h2 class="section3-price">$1795</h2>
-            </div>
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/clinical-opc.png"
-                alt="clinical opc"
-                class="section3-card-img"
-              />
-              <h2 class="section3-heading">
-                Terry Naturally- Clinical OPC® Extra Strength- 400 mg- 60 Soft
-                Gels
-              </h2>
-              <p class="section3-benefit">Terry Naturally</p>
-              <h2 class="section3-price">$4995</h2>
-            </div>
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/niacin.png"
-                alt="niacin"
-                class="section3-card-img"
-              />
-              <h2 class="section3-heading">
-                Natural Factors- Vitamin B3 No Flush Niacin- 500mg- 90 Capsules
-              </h2>
-              <p class="section3-benefit">Natural Factors</p>
-              <h2 class="section3-price">$1995</h2>
-            </div>
+
+            <h3 class="section3_5-heading">
+              Natural Factors- SelenoExcell Selenium- 200 mcg- 90 Capsules
+            </h3>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h3 class="section3_5-price">$1395</h3>
           </div>
-        </section>
-        <section class="section4">
-          <div class="section4-left-content">
-            <h1>Check out our bestselling "Dr. Barry's" product line!</h1>
-            <p>
-              Our father drew on his knowledge as an herbalist to create
-              individual remedies for the customers at his health food store.
-              Quickly, these custom formulations became known and sought after
-              across the country for their effectiveness. See why they've been
-              trusted for over 25 years!
-            </p>
-            <button class="section4-btn upper">shop now</button>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <img src="./assets/imgs/k2.png" alt="k2" class="section3_5-card-img k2" />
+            <h3 class="section3_5-heading">
+              Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian Capsules
+            </h3>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h3 class="section3_5-price">$1795</h3>
           </div>
-          <div class="section4--right-img">
-            <img
-              src="./assets/imgs/section4img.png"
-              alt="man carrying three syrup in his hands"
-              class="section4-img"
-            />
-          </div>
-        </section>
-        <section class="section5">
-          <div class="section5-head">
-            <h1 class="upper">Heart Health</h1>
-            <h3>view all</h3>
-          </div>
-          <div class="section5-new-grid" data-view="6-3">
-            <div class="section3-grid-item">
-              <img
-                src="./assets/imgs/coenzyme.png"
-                alt="coenzyme"
-                class="section3-card-img"
-              />
-              <h2 class="section5-heading">
-                Natural Factors- Coenzyme Q10- 100 mg- 60 Soft Gels
-              </h2>
-              <p class="section5-benefit">Natural Factors</p>
-              <h2 class="section5-price">$2295</h2>
-            </div>
-            <div class="section5-grid-item">
-              <img
-                src="./assets/imgs/seleno.png"
-                alt="seleno"
-                class="section5-card-img"
-              />
-              <h2 class="section5-heading">
-                Natural Factors- SelenoExcell Selenium- 200 mcg- 90 Capsules
-              </h2>
-              <p class="section5-benefit">Natural Factors</p>
-              <h2 class="section5-price">$1395</h2>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+
+            <div class="section3_5-flex-item-img">
+              <p class="sold-out">SOLD OUT</p>
+              <img src="./assets/imgs/clinical-opc.png" alt="clinical opc" class="section3_5-card-img clinical-opc" />
             </div>
 
-            <div class="section5-grid-item">
-              <img
-                src="./assets/imgs/k2.png"
-                alt="k2"
-                class="section5-card-img"
-              />
-              <h2 class="section5-heading">
-                Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian Capsules
-              </h2>
-              <p class="section5-benefit">Natural Factors</p>
-              <h2 class="section5-price">$1795</h2>
-            </div>
-            <div class="section5-grid-item">
-              <img
-                src="./assets/imgs/clinical-opc.png"
-                alt="clinical opc"
-                class="section5-card-img"
-              />
-              <h2 class="section5-heading">
-                Terry Naturally- Clinical OPC® Extra Strength- 400 mg- 60 Soft
-                Gels
-              </h2>
-              <p class="section5-benefit">Terry Naturally</p>
-              <h2 class="section5-price">$4995</h2>
-            </div>
-            <div class="section5-grid-item">
-              <img
-                src="./assets/imgs/niacin.png"
-                alt="niacin"
-                class="section5-card-img"
-              />
-              <h2 class="section5-heading">
-                Natural Factors- Vitamin B3 No Flush Niacin- 500mg- 90 Capsules
-              </h2>
-              <p class="section5-benefit">Natural Factors</p>
-              <h2 class="section5-price">$1995</h2>
-            </div>
+            <h3 class="section3_5-heading">
+              Terry Naturally- Clinical OPC® Extra Strength- 400 mg- 60 Soft
+              Gels
+            </h3>
+            <p class="section3_5-benefit">Terry Naturally</p>
+            <h3 class="section3_5-price">$4995</h3>
           </div>
-        </section>
-        <section class="section6">
-          <h2>Popular Brands</h2>
-          <div class="section6-items">
-            <div class="section6-item">
-              <img src="./assets/icons/drbarys.svg" alt="dr barys" />
-            </div>
-            <div class="section6-item">
-              <img src="./assets/icons/hostdefence.svg" alt="host defence" />
-            </div>
-            <div class="section6-item">
-              <img
-                src="./assets/icons/terrynaturally.svg"
-                alt="terrynaturallys"
-              />
-            </div>
-            <div class="section6-item">
-              <img src="./assets/icons/enzymdia.svg" alt="enzymdia" />
-            </div>
-            <div class="section6-item">
-              <img src="./assets/icons/naturalways.svg" alt="naturalways" />
-            </div>
-            <!-- <div class="section6-item"><img src="" alt="" /></div> -->
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <img src="./assets/imgs/niacin.png" alt="niacin" class="section3_5-card-img niacin" />
+            <h3 class="section3_5-heading">
+              Natural Factors- Vitamin B3 No Flush Niacin- 500mg- 90 Capsules
+            </h3>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h3 class="section3_5-price">$1995</h3>
           </div>
-        </section>
-        <section class="section7">
-          <div class="section7-item">
-            <h1 class="section7-item-heading">Happy, Healthy Kids</h1>
-            <p class="section7-item-para">
-              Shop our selection of immune boosters, gut health and calming
-              formulas to keep your kids happy and healthy all year long.
-            </p>
-            <button class="section7-item-btn upper">shop</button>
-          </div>
-        </section>
-        <section class="section8">
-          <h1>FROM OUR CUSTOMERS</h1>
-          <div class="section8-carousel slideshow-container">
-            <div class="mySlides fade">
-              <blockquote class="fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    Been going to Remedies for years. Always a positive
-                    experience. There is real healing there.
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Barbie Wools</cite>
-              </blockquote>
+        </div>
+      </section>
+      <section class="section4">
+        <div class="section4-left-content">
+          <h1>Check out our bestselling "Dr. Barry's" product line!</h1>
+          <p>
+            Our father drew on his knowledge as an herbalist to create
+            individual remedies for the customers at his health food store.
+            Quickly, these custom formulations became known and sought after
+            across the country for their effectiveness. See why they've been
+            trusted for over 25 years!
+          </p>
+          <button class="section4-btn upper">shop now</button>
+        </div>
+        <div class="section4--right-img">
+          <img src="./assets/imgs/section4img.png" alt="man carrying three syrup in his hands" class="section4-img" />
+        </div>
+      </section>
+      <section class="section3_5" id="section3_5">
+        <div class="section3_5-head">
+          <h1 class="upper">Best Sellers</h1>
+          <h3>view all</h3>
+        </div>
+        <div class="section3_5-new-flex">
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <div class="section3_5-flex-item-img">
+              <img src="./assets/imgs/coenzyme.png" alt="coenzyme" class="section3_5-card-img coenzyme1" />
             </div>
-            <div class="mySlides fade">
-              <blockquote class="fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    Great people, great advice! And just lovely to visit with.
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Cathy Howard</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>Great place to get natural herbs</p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Pentoda1</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>Awesome!</p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Sammee G.</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>Amazing!!!!!!</p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Colecia Whitaker</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="mySlides fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>Great experience</p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Clay Williams</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="mySlides fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    Love this shop! They have a great selection and Hannah was
-                    so knowledgeable and so helpful. I'll definitely be shopping
-                    here again! Knowledgeable staff! Great selection!
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Kayla Campbell</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="mySlides fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    I have been dealing with arthritis in my neck since
-                    2009....when it flares up it is debilitating for appx 24
-                    hours....after talking with Dane and Chelsea about it Dane
-                    recommended some product that really works!!! It started
-                    relieving my pain within 20 minutes and was totally gone
-                    within 3 hours!!!! Thank you Dane and Chelsea for your
-                    knowledge and great products!!!!
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Bobby Shock</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="mySlides fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    I cannot say enough about how helpful they are in helping us
-                    select the best possible supplements. please give them a
-                    try, you won't regret it!
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Joshua Nicholas Costner</cite>
-              </blockquote>
-            </div>
-            <div class="mySlides fade">
-              <blockquote class="mySlides fader__text">
-                <span class="testimonial-stars">★★★★★</span>
-                <div class="rte-setting text-spacing">
-                  <p>
-                    These remedies can do what conventional medicine is not able
-                    to do sometimes. They are also an assist for healthy living
-                    that we cannot always get through our food. They have been
-                    so helpful to me in the past as a way to recover after
-                    treatment or as a way to avoid conventional treatment and
-                    prescription.&nbsp; There is room in medicine for both
-                    conventional and alternative.&nbsp; I'm so thankful that you
-                    are carrying on Barry's legacy.
-                  </p>
-                </div>
-                <div class="testimonail-image--round">
-                  <div>
-                    <img
-                      class="section8-img"
-                      src="./assets/imgs/section8.png"
-                    />
-                  </div>
-                </div>
-                <cite>Melvin Howard</cite>
-              </blockquote>
-            </div>
-          </div>
-          <br />
 
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
+            <h4 class="section3_5-heading">
+              Natural Factors- Coenzyme Q10- 100 mg- 60 Soft Gels
+            </h4>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h4 class="section3_5-price">$2295</h4>
           </div>
-        </section>
-        <section class="section9">
-          <div class="section9-head">
-            <h1 class="upper">body & soul</h1>
-            <h3>view all</h3>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <img src="./assets/imgs/seleno.png" alt="seleno" class="section3_5-card-img seleno1" />
+            <h4 class="section3_5-heading">
+              Natural Factors- SelenoExcell Selenium- 200 mcg- 90 Capsules
+            </h4>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h4 class="section3_5-price">$1395</h4>
           </div>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
 
-          <div class="section9-container">
-            <div class="section9-container-left">
-              <img
-                class="section9-container-left-img"
-                src="./assets/imgs/section9.png"
-                alt="hands"
-              />
-              <h1 class="upper">div hand saniitzer</h1>
-              <p>by Chelsea Etheridge</p>
+
+            <div class="section3_5-flex-item-img">
+              <p class="sold-out">SOLD OUT</p>
+              <img src="./assets/imgs/k2.png" alt="k2" class="section3_5-card-img k21" />
             </div>
-            <div class="section9-container-right">
-              <h3>Latest posts</h3>
-              <div class="section9-container-right-items">
-                <div class="section9-container-right-item">
-                  <img
-                    class="section9-container-right-item-img"
-                    src="./assets/imgs/bath.png"
-                    alt="bath"
-                  />
+
+            <h4 class="section3_5-heading">
+              Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian Capsules
+            </h4>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h4 class="section3_5-price">$1795</h4>
+          </div>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <img src="./assets/imgs/clinical-opc.png" alt="clinical opc" class="section3_5-card-img clinical-opc1" />
+            <h4 class="section3_5-heading">
+              Terry Naturally- Clinical OPC® Extra Strength- 400 mg- 60 Soft
+              Gels
+            </h4>
+            <p class="section3_5-benefit">Terry Naturally</p>
+            <h4 class="section3_5-price">$4995</h4>
+          </div>
+          <div class="section3_5-flex-item">
+            <img src="./assets/icons/newsize/search-interface-symbol.png" alt="search green" class="search-g">
+            <img src="./assets/icons/icons8-plus.png" alt="plus" class="plus">
+            <img src="./assets/imgs/niacin.png" alt="niacin" class="section3_5-card-img niacin1" />
+            <h4 class="section3_5-heading">
+              Natural Factors- Vitamin B3 No Flush Niacin- 500mg- 90 Capsules
+            </h4>
+            <p class="section3_5-benefit">Natural Factors</p>
+            <h4 class="section3_5-price">$1995</h4>
+          </div>
+        </div>
+      </section>
+      <section class="section6">
+        <h2>Popular Brands</h2>
+        <div class="section6-items">
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/drbarys.svg" alt="dr barys" />
+          </div>
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/hostdefence.svg" alt="host defence" />
+          </div>
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/terrynaturally.svg" alt="terrynaturallys" />
+          </div>
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/enzymdia.svg" alt="enzymdia" />
+          </div>
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/aura.webp" alt="naturalways" />
+          </div>
+          <div class="section6-item">
+            <img class="section6-item-img" src="./assets/icons/naturalways.svg" alt="naturalways" />
+          </div>
+          <!-- <div class="section6-item"><img src="" alt="" /></div> -->
+        </div>
+      </section>
+      <section class="section7">
+        <div class="section7-item">
+          <h1 class="section7-item-heading">Happy, Healthy Kids</h1>
+          <p class="section7-item-para">
+            Shop our selection of immune boosters, gut health and calming
+            formulas to keep your kids happy and healthy all year long.
+          </p>
+          <button class="section7-item-btn upper">shop</button>
+        </div>
+      </section>
+      <section class="section8">
+        <h1 class="section8-heading">FROM OUR CUSTOMERS</h1>
+        <div class="section8-carousel slideshow-container">
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  Been going to Remedies for years. Always a positive
+                  experience. There is real healing there.
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Barbie Wools</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  Great people, great advice! And just lovely to visit with.
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Cathy Howard</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>Great place to get natural herbs</p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Pentoda1</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>Awesome!</p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Sammee G.</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>Amazing!!!!!!</p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Colecia Whitaker</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>Great experience</p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Clay Williams</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  Love this shop! They have a great selection and Hannah was
+                  so knowledgeable and so helpful. I'll definitely be shopping
+                  here again! Knowledgeable staff! Great selection!
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Kayla Campbell</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  I have been dealing with arthritis in my neck since
+                  2009....when it flares up it is debilitating for appx 24
+                  hours....after talking with Dane and Chelsea about it Dane
+                  recommended some product that really works!!! It started
+                  relieving my pain within 20 minutes and was totally gone
+                  within 3 hours!!!! Thank you Dane and Chelsea for your
+                  knowledge and great products!!!!
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Bobby Shock</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  I cannot say enough about how helpful they are in helping us
+                  select the best possible supplements. please give them a
+                  try, you won't regret it!
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Joshua Nicholas Costner</cite>
+            </blockquote>
+          </div>
+          <div class="mySlides fade">
+            <blockquote class="fader__text">
+              <span class="testimonial-stars">★★★★★</span>
+              <div class="rte-setting text-spacing">
+                <p>
+                  These remedies can do what conventional medicine is not able
+                  to do sometimes. They are also an assist for healthy living
+                  that we cannot always get through our food. They have been
+                  so helpful to me in the past as a way to recover after
+                  treatment or as a way to avoid conventional treatment and
+                  prescription.&nbsp; There is room in medicine for both
+                  conventional and alternative.&nbsp; I'm so thankful that you
+                  are carrying on Barry's legacy.
+                </p>
+              </div>
+              <div class="testimonail-image--round">
+                <div>
+                  <img class="section8-img" src="./assets/imgs/section8.png" />
+                </div>
+              </div>
+              <cite>Melvin Howard</cite>
+            </blockquote>
+          </div>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+      </section>
+      <section class="section9">
+        <div class="section9-head">
+          <h1 class="upper">body & soul</h1>
+          <h3>view all</h3>
+        </div>
+
+        <div class="section9-container">
+          <div class="section9-container-left">
+            <img class="section9-container-left-img" src="./assets/imgs/section9.png" alt="hands" />
+            <h1 class="upper">hand saniitzer</h1>
+            <p>by Chelsea Etheridge</p>
+          </div>
+          <div class="section9-container-right">
+            <h3>Latest posts</h3>
+            <div class="section9-container-right-items">
+              <div class="section9-container-right-item">
+                <img class="section9-container-right-item-img" src="./assets/imgs/bath.png" alt="bath" />
+                <div class="section9-headingPdesc">
                   <h4>Dry Brushing: A How To</h4>
                   <p>by Chelsea Etheridge</p>
                 </div>
-                <div class="section9-container-right-item">
-                  <img
-                    class="section9-container-right-item-img"
-                    src="./assets/imgs/wallpaper.jpg"
-                    alt="wallpaper"
-                  />
+              </div>
+              <div class="section9-container-right-item">
+                <img class="section9-container-right-item-img" src="./assets/imgs/wallpaper.jpg" alt="wallpaper" />
+                <div class="section9-headingPdesc">
                   <h4>I Wet My Plants</h4>
                   <p>by Chelsea Etheridge</p>
                 </div>
-                <div class="section9-container-right-item">
-                  <img
-                    class="section9-container-right-item-img"
-                    src="./assets/imgs/kid.jpg"
-                    alt="kid"
-                  />
+              </div>
+              <div class="section9-container-right-item">
+                <img class="section9-container-right-item-img" src="./assets/imgs/kid.jpg" alt="kid" />
+                <div class="section9-headingPdesc">
                   <h4>The Best Healthy-is Chocolate Chip Cookie Recipe</h4>
                   <p>by Chelsea Etheridge</p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section class="section10">
-          <div class="section10-head">
-            <h1 class="upper">body & soul</h1>
-            <h3>view all</h3>
+        </div>
+      </section>
+      <hr>
+      <section class="section10">
+        <div class="section10-container">
+          <div class="section10-container-left">
+            <p class="section10-container-left-heading">Our mission...</p>
+            <p>
+              ...is to help people find their dignity, realize their
+              potential, and live lives of health and wholeness. </p>
+            <br>
+            <p>We believe
+              you have an important story to live. A story full of purpose,
+              connection, and fun.</p> <br>
+            <p>Don’t miss out on your life. Change your
+              health… change your story.
+            </p>
           </div>
+          <div class="section10-container-right">
+            <video class="section10-right-video" controls="controls">
+              <source src="./assets/video/TaglineAnimation.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+      <section class="section11">
+        <img src="./assets/icons/remedies.png" alt="remedies" class="section11-main-logo" />
+        <div class="section11-logos">
+          <div class="imgPname">
+            <img src="./assets/icons/easyReturns.png" alt="returns" class="section11-logo" />
+            <h5>EASY RETURNS</h5>
+          </div>
+          <div class="imgPname">
+            <img src="/assets/icons/customerSupport.png" alt="customer" class="section11-logo" />
+            <h5>CUSTOMER SUPPORT</h5>
+          </div>
+          <div class="imgPname">
+            <img src="./assets/icons/shipping.png" alt="shipping" class="section11-logo" />
+            <h5>FAST, FREE SHIPPING</h5>
+          </div>
+          <div class="imgPname">
+            <img src="./assets/icons/gurantee.png" alt="gurantee" class="section11-logo" />
+            <h5>LOW PRICE GUARANTEE</h5>
+          </div>
+        </div>
+      </section>
+      <section class="section12">
+        <input type="text" class="section12-signup" placeholder="  Sign up for discounts and tips" />
+        <button class="section12-btn">Subscribe</button>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <img src="./assets/icons/footerIcons/footerLogo.png" alt="footer-logo" class="footer-main-logo" />
+      <div class="footer-container-items">
+        <div class="footer-container-item touch">
+          <h2>GET IN TOUCH</h2>
+          <div class="footer-touch-item">
+            <img src="./assets/icons/mail.png" alt="mail" class="touch-icon">
+            <p>Email Us</p>
 
-          <div class="section10-container">
-            <div class="section10-container-left">
-              <h3>Our mission...</h3>
-              <p>
-                ...is to help people find their dignity, realize their
-                potential, and live lives of health and wholeness. We believe
-                you have an important story to live. A story full of purpose,
-                connection, and fun. Don’t miss out on your life. Change your
-                health… change your story.
-              </p>
-            </div>
-            <div class="section10-container-left">
-              <video class="section10-right-video" controls="controls">
-                <source
-                  src="./assets/video/TaglineAnimation.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
           </div>
-        </section>
-        <section class="section11">
-          <img
-            src="./assets/icons/remedies.png"
-            alt="remedies"
-            class="section11-main-logo"
-          />
-          <div class="section11-logos">
-            <div class="imgPname">
-              <img
-                src="./assets/icons/easyReturns.png"
-                alt="returns"
-                class="section11-logo"
-              />
-              <h4>EASY RETURNS</h4>
-            </div>
-            <div class="imgPname">
-              <img
-                src="/assets/icons/customerSupport.png"
-                alt="customer"
-                class="section11-logo"
-              />
-              <h4>CUSTOMER SUPPORT</h4>
-            </div>
-            <div class="imgPname">
-              <img
-                src="./assets/icons/shipping.png"
-                alt="shipping"
-                class="section11-logo"
-              />
-              <h4>FAST, FREE SHIPPING</h4>
-            </div>
-            <div class="imgPname">
-              <img
-                src="./assets/icons/gurantee.png"
-                alt="gurantee"
-                class="section11-logo"
-              />
-              <h4>LOW PRICE GUARANTEE</h4>
-            </div>
+          <div class="footer-touch-item">
+            <img src="./assets/icons/facebook-app-symbol.png" alt="fb" class="touch-icon">
+            <p>Facebook</p>
+
           </div>
-        </section>
-        <section class="section12">
-          <input
-            type="text"
-            class="section12-signup"
-            placeholder="  Sign up for discounts and tips"
-          />
-          <button class="section12-btn">Subscribe</button>
-        </section>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer-container">
-        <img
-          src="./assets/icons/footerIcons/footerLogo.png"
-          alt="footer-logo"
-          class="footer-main-logo"
-        />
-        <div class="footer-container-items">
-          <div class="footer-container-item">
-            <h2>GET IN TOUCH</h2>
-            <div class="footer-touch-item"><p>Email Us</p></div>
-            <div class="footer-touch-item"><p>Facebook</p></div>
-            <div class="footer-touch-item"><p>Instagram</p></div>
+          <div class="footer-touch-item">
+            <img src="./assets/icons/footerIcons/instagram.png" alt="insta" class="touch-icon">
+            <p>Instagram</p>
           </div>
-          <div class="footer-container-item">
-            <h2>SUPPORT</h2>
-            <div class="footer-support-item"><p>Shipping Information</p></div>
-            <div class="footer-support-item"><p>Return Policy</p></div>
+        </div>
+        <div class="footer-container-item support">
+          <h2>SUPPORT</h2>
+          <div class="footer-support-item">
+            <p>Shipping Information</p>
           </div>
-          <div class="footer-container-item">
-            <h2>QUICK LINKS</h2>
-            <div class="footer-quick-item"><p>Privacy Policy</p></div>
-            <div class="footer-quick-item"><p>Security Policy</p></div>
-            <div class="footer-quick-item"><p>Terms and Conditions</p></div>
+          <div class="footer-support-item">
+            <p>Return Policy</p>
           </div>
-          <div class="footer-container-item">
-            <h2>WE ACCEPT</h2>
-            <div class="footer-accept-items">
-              <img
-                src="./assets/icons/footerIcons/vector7.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector8.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector12.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector9.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector13.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector10.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="./assets/icons/footerIcons/vector14.svg"
-                alt=""
-                class="footer-accept-img"
-              /><img
-                src="/assets/icons/footerIcons/vector11.svg"
-                alt=""
-                class="footer-accept-img"
-              />
-            </div>
+        </div>
+        <div class="footer-container-item links">
+          <h2>QUICK LINKS</h2>
+          <div class="footer-quick-item">
+            <p>Privacy Policy</p>
+          </div>
+          <div class="footer-quick-item">
+            <p>Security Policy</p>
+          </div>
+          <div class="footer-quick-item">
+            <p>Terms and Conditions</p>
+          </div>
+        </div>
+        <div class="footer-container-item accept">
+          <h2>WE ACCEPT</h2>
+          <div class="footer-accept-items">
+            <img src="./assets/icons/footerIcons/vector7.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector8.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector12.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector9.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector13.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector10.svg" alt="" class="footer-accept-img" /><img
+              src="./assets/icons/footerIcons/vector14.svg" alt="" class="footer-accept-img" /><img
+              src="/assets/icons/footerIcons/vector11.svg" alt="" class="footer-accept-img" />
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <span class="copy"
-          >© 2023 <a data-cc-animate-click="" href="/">Remedies</a>.</span
-        >
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+    <div class="copyright">
+      <span class="copy">© 2023 Remedies</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
