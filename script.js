@@ -2,6 +2,7 @@ let hamburger = document.getElementById("hamburger-icon");
 let burger = document.getElementById("burger");
 let healthGoal = document.getElementById("hamburger-health-goal-inner");
 let productType = document.getElementById("hamburger-product-type-inner");
+let main = document.getElementById("main");
 
 burger.addEventListener("click", () => {
   if (hamburger.classList.contains("open")) {
@@ -10,6 +11,7 @@ burger.addEventListener("click", () => {
     productType.style.display = "none";
   } else {
     hamburger.classList.add("open");
+    main.style.display = "none";
   }
 });
 
@@ -28,12 +30,15 @@ window.onscroll = function () {
 
 var header = document.getElementById("nav");
 var sticky = header.offsetTop;
+let dropDown = document.getElementById("main-dropdown");
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    dropDown.style.height = "7.6vh";
   } else {
     header.classList.remove("sticky");
+    dropDown.style.height = "15vh";
   }
 }
 
@@ -53,14 +58,12 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n == slides.length) {
-    n = n - 3;
+
+  if (n > slides.length - 1) {
+    slideIndex = 9;
   }
-  if (n > slides.length) {
-    slideIndex = slides.length - 3;
-  }
-  if (n < 1) {
-    slideIndex = 0;
+  if (n < 2) {
+    slideIndex = 2;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -70,15 +73,13 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  slides[slideIndex + 1].style.boxShadow = "0px 0px 5px 8px #f8f8f8";
   if (window.innerWidth > 771) {
     slides[slideIndex].style.display = "flex";
-
-    slides[slideIndex + 2].style.display = "flex";
+    slides[slideIndex - 2].style.display = "flex";
   }
-
-  slides[slideIndex + 1].style.display = "flex";
-  dots[slideIndex + 1].className += " active";
+  slides[slideIndex - 1].style.boxShadow = "0px 0px 5px 8px #f8f8f8";
+  slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " active";
 }
 
 // // For handling click on hamburger inner icons
