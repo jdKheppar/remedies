@@ -461,8 +461,8 @@ select:focus {
   overflow: hidden;
   z-index: 5;
 }
-.hamburger-inner-head {
-  display: flex;
+.hamburger-inner-head-item {
+  display: inline-block;
 }
 
 /* Main */
@@ -688,9 +688,10 @@ select:focus {
   padding: 1rem 2rem;
   color: #00544f;
   background-color: #b7e2de;
-  font-size: larger;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
+  cursor: pointer;
 }
 
 .section4--right-img {

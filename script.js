@@ -11,6 +11,7 @@ burger.addEventListener("click", () => {
     productType.style.display = "none";
   } else {
     hamburger.classList.add("open");
+    mobileMenu.style.display = "flex";
     main.style.display = "none";
   }
 });
@@ -55,6 +56,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  //Use transitions here instead of display none and flex
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
