@@ -297,7 +297,6 @@ select:focus {
 /* Hamburger CSS */
 
 .mobile-view-container {
-  background-color: yellow;
   width: 100%;
 }
 
@@ -342,7 +341,7 @@ select:focus {
 
 .open .bar3 {
   -webkit-transform: rotate(45deg) translate(-6px, -8px);
-  transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .open .mobile-menu {
@@ -351,6 +350,7 @@ select:focus {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+  margin-top: 10px;
   z-index: 3;
 }
 
@@ -429,6 +429,7 @@ select:focus {
   background-color: #f8f8f8;
   overflow: hidden;
   z-index: 5;
+  margin-top: 10px;
 }
 .hamburger-inner-head-item {
   display: inline-block;
