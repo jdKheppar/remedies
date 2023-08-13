@@ -16,57 +16,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  /* overflow-x: hidden; */
 }
 
 :root {
   --bg-clr-navbar: #c9e9e6;
   --bg-clr-top-navbar: #faf7e6;
   --main-font-color: #2e6e66;
-  --colorBtnPrimary: #c9e9e6;
-  --colorBtnPrimaryLight: #edf8f7;
-  --colorBtnPrimaryDim: #b7e2de;
-  --colorBtnPrimaryText: #00544f;
-  --colorCartDot: #ba4444;
-  --colorCartDotText: #fff;
-  --colorLink: #000000;
-  --colorTextBody: #000000;
-  --colorPrice: #1c1d1d;
-  --colorTextSavings: #c4764f;
-  --colorSaleTag: #c9e9e6;
-  --colorSaleTagText: #00544f;
-  --colorBody: #ffffff;
-  --colorBodyDim: #f2f2f2;
-  --colorFooter: #c9e9e6;
-  --colorFooterBorder: #e8e8e1;
-  --colorFooterText: #00544f;
-  --colorBorder: #ececeb;
-  --colorNav: #c9e9e6;
   --colorNavText: #00544f;
-  --colorToolbar: #faf7e6;
-  --colorToolbarText: #00544f;
-  --colorNavSearch: #ffffff;
-  --colorModalBg: #e0e0e0;
-  --colorScheme1Text: #c4764f;
-  --colorScheme1Bg: #faf7e6;
-  --colorScheme2Text: #ffffff;
-  --colorScheme2Bg: #c4764f;
-  --colorScheme3Text: #000000;
-  --colorScheme3Bg: #ffffff;
-  --header-padding-bottom: 0;
-  --pageTopPadding: 35px;
-  --pageNarrow: 700px;
-  --pageWidthPadding: 40px;
-  --gridGutter: 22px;
-  --indexSectionPadding: 60px;
-  --sectionHeaderBottom: 40px;
-  --collapsibleIconWidth: 12px;
-  --textFrameMargin: 10px;
-  --color-body-text: #000000;
-  --color-body: #ffffff;
-  --color-bg: #ffffff;
 }
 
 .upper {
@@ -281,7 +238,8 @@ select:focus {
   top: 7.6vh;
   left: 0;
   background-color: white;
-  width: 97.5vw;
+  /* width: 97.5vw; */
+  width: 100%;
   height: 70vh;
   /* height: auto; */
   padding: 30px;

@@ -124,16 +124,6 @@
                       alt="greater than"
                     />
                   </button>
-                  <div id="hamburger-brands-inner">
-                    <h2>Brands</h2>
-                    <p>View All</p>
-                    <p>Immune Boosters</p>
-                    <p>Digestive</p>
-                    <p>Mood And Anxiety</p>
-                    <p>Sleep</p>
-                    <p>Heart Health</p>
-                    <p>All Products</p>
-                  </div>
                 </div>
                 <hr class="hamburger-hr" />
                 <div class="hamburger-dropdown">
@@ -161,7 +151,7 @@
 
               <!-- Health Goal -->
               <div id="hamburger-health-goal-inner">
-                <div class="hamburger-inner-head">
+                <div class="hamburger-inner-head" onclick="hamburgerInnerBtn()">
                   <img
                     class="less-than hamburger-inner-head-item"
                     src="./assets/icons/less-than-symbol.png"
@@ -252,7 +242,16 @@
               </div>
               <!-- Product Type -->
               <div id="hamburger-product-type-inner">
-                <h2>Product Type</h2>
+                <div class="hamburger-inner-head" onclick="hamburgerInnerBtn()">
+                  <img
+                    class="less-than hamburger-inner-head-item"
+                    src="./assets/icons/less-than-symbol.png"
+                    alt="less than"
+                  />
+                  <h2 class="underline hamburger-inner-head-item">
+                    Product Type
+                  </h2>
+                </div>
                 <hr class="hamburger-hr" />
                 <div class="hamburger-dropdown">
                   <button class="hamburger-dropbtn upper">
@@ -495,7 +494,6 @@
         </div>
       </div>
     </header>
-
     <main id="main">
       <img class="main-img" src="./assets/imgs/mainHome.webp" alt="main img" />
       <div class="sections">

@@ -94,15 +94,15 @@ function showSlides(n) {
 
 // // For handling click on hamburger inner icons
 
+let mobileMenu = document.getElementById("mobile-menu");
+let healthGoalInner = document.getElementById("hamburger-health-goal-inner");
 function hamburgerInner(n) {
-  let mobileMenu = document.getElementById("mobile-menu");
-
   if (n == 1) {
     mobileMenu.style.display = "none";
 
-    healthGoal.style.display = "flex";
-    healthGoal.style.flexDirection = "column";
-    healthGoal.style.color = "#2e6e66";
+    healthGoalInner.style.display = "flex";
+    healthGoalInner.style.flexDirection = "column";
+    healthGoalInner.style.color = "#2e6e66";
     console.log("Hamburger Clikced");
   }
   if (n == 2) {
@@ -114,9 +114,15 @@ function hamburgerInner(n) {
   }
   if (n == 3) {
     mobileMenu.style.display = "none";
-    let healthGoal = document.getElementById("hamburger-brands-inner");
     healthGoal.style.display = "flex";
     healthGoal.style.color = "#2e6e66";
     console.log("Hamburger Clikced");
   }
+}
+
+function hamburgerInnerBtn() {
+  console.log("I am clicked");
+  mobileMenu.style.display = "flex";
+  healthGoalInner.style.display = "none";
+  productType.style.display = "none";
 }
