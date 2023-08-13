@@ -1,14 +1,23 @@
+let topNavbar = document.getElementById("top-navbar");
+let searchBar = document.getElementById("search-bar");
+
 let hamburger = document.getElementById("hamburger-icon");
 let burger = document.getElementById("burger");
 let healthGoal = document.getElementById("hamburger-health-goal-inner");
 let productType = document.getElementById("hamburger-product-type-inner");
 let main = document.getElementById("main");
 
+//Hamburger Declarations
+let mobileMenu = document.getElementById("mobile-menu");
+let healthGoalInner = document.getElementById("hamburger-health-goal-inner");
+
 burger.addEventListener("click", () => {
   if (hamburger.classList.contains("open")) {
     hamburger.classList.remove("open");
+    main.style.display = "block";
     healthGoal.style.display = "none";
     productType.style.display = "none";
+    mobileMenu.style.display = "none";
   } else {
     hamburger.classList.add("open");
     mobileMenu.style.display = "flex";
@@ -94,8 +103,6 @@ function showSlides(n) {
 
 // // For handling click on hamburger inner icons
 
-let mobileMenu = document.getElementById("mobile-menu");
-let healthGoalInner = document.getElementById("hamburger-health-goal-inner");
 function hamburgerInner(n) {
   if (n == 1) {
     mobileMenu.style.display = "none";

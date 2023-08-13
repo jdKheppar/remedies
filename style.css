@@ -296,6 +296,11 @@ select:focus {
 
 /* Hamburger CSS */
 
+.mobile-view-container {
+  background-color: yellow;
+  width: 100%;
+}
+
 #hamburger-icon {
   margin: auto 1rem;
   display: none;
@@ -356,7 +361,7 @@ select:focus {
   left: 0;
   height: auto;
   padding: 20px;
-  width: 90%;
+
   background-color: #f8f8f8;
   overflow: hidden;
 }
@@ -1086,6 +1091,9 @@ select:focus {
     width: 95%;
     left: 10px;
     bottom: 10px;
+  }
+  .main-navbar-cart-para {
+    display: none;
   }
 
   .main-navbar-input {
