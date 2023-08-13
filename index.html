@@ -167,9 +167,11 @@
                     src="./assets/icons/less-than-symbol.png"
                     alt="less than"
                   />
-                  <h2 class="underline hamburger-inner-head-item">Health Goal</h2>
+                  <h2 class="underline hamburger-inner-head-item">
+                    Health Goal
+                  </h2>
                 </div>
-                
+
                 <hr class="hamburger-hr" />
                 <div class="hamburger-dropdown">
                   <button class="hamburger-dropbtn upper">
@@ -334,7 +336,7 @@
         </div>
         <hr id="header-hr" />
         <div class="main-dropdown" id="main-dropdown">
-          <ul>
+          <ul id="main-dropdown-ul">
             <li>
               <div class="dropdown dropdown-trans">
                 <button id="dropdown-unchanged" class="dropbtn upper">
@@ -370,16 +372,21 @@
                     <h3 class="health-goal-h3">Shop All</h3>
                     <h3 class="health-goal-h3">All Products</h3>
                   </div>
-                  <div class="health-goal-right">
-                    <img
-                      src="./assets/imgs/dropdown/1.png"
-                      alt="one"
-                      class="health-goal-img"
-                    /><img
-                      src="./assets/imgs/dropdown/2.png"
-                      alt="two"
-                      class="health-goal-img"
-                    />
+                  <div class="health-goal-right" id="health-goal-right">
+                    <div class="health-goal-img-item">
+                      <img
+                        src="./assets/imgs/dropdown/1.png"
+                        alt="one"
+                        class="health-goal-img"
+                      />
+                    </div>
+                    <div class="health-goal-img-item">
+                      <img
+                        src="./assets/imgs/dropdown/2.png"
+                        alt="two"
+                        class="health-goal-img"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1230,12 +1237,14 @@
     </main>
     <footer class="footer">
       <div class="footer-container">
-        <img
-          src="./assets/icons/footerIcons/footerLogo.png"
-          alt="footer-logo"
-          class="footer-main-logo"
-        />
         <div class="footer-container-items">
+          <div class="footer-container-item footer-logo">
+            <img
+              src="./assets/icons/footerIcons/footerLogo.png"
+              alt="footer-logo"
+              class="footer-main-logo"
+            />
+          </div>
           <div class="footer-container-item touch">
             <h4 class="footer-container-heading">GET IN TOUCH</h4>
             <div class="footer-touch-item">
@@ -1244,7 +1253,7 @@
                 alt="mail"
                 class="touch-icon"
               />
-              <p>Email Us</p>
+              <p class="footer-touch-item-p">Email Us</p>
             </div>
             <div class="footer-touch-item">
               <img
@@ -1252,7 +1261,7 @@
                 alt="fb"
                 class="touch-icon"
               />
-              <p>Facebook</p>
+              <p class="footer-touch-item-p">Facebook</p>
             </div>
             <div class="footer-touch-item">
               <img
@@ -1260,7 +1269,7 @@
                 alt="insta"
                 class="touch-icon"
               />
-              <p>Instagram</p>
+              <p class="footer-touch-item-p">Instagram</p>
             </div>
           </div>
           <div class="footer-container-item support">
@@ -1324,7 +1333,7 @@
           </div>
         </div>
       </div>
-      <div class="copyright">
+      <div class="bottom-footer copyright">
         <span class="copy">© 2023 Remedies</span>
       </div>
     </footer>

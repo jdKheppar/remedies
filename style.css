@@ -233,7 +233,6 @@ select:focus {
   background-color: var(--bg-clr-navbar);
   color: #2e6e66;
   position: relative;
-
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -244,6 +243,7 @@ select:focus {
 
 .main-dropdown ul li {
   list-style: none;
+  overflow-x: hidden;
 }
 
 .main-dropdown ul {
@@ -251,6 +251,8 @@ select:focus {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 /* Main Dropdown */
@@ -269,19 +271,30 @@ select:focus {
 
 .dropdown {
   display: inline-block;
+  /* position: relative;
+  max-width: 100%; */
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 7.6vh;
   left: 0;
   background-color: white;
-  width: 100%;
+  width: 97.5vw;
   height: 70vh;
+  /* height: auto; */
   padding: 30px;
+  margin-top: 0; /* Reset margin if needed */
+  margin-bottom: 0; /* Reset margin if needed */
+  overflow: hidden;
   z-index: 10;
 }
-
+.dropdown:hover .dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
 .health-goal-h3 {
   color: #2e6e66;
 }
@@ -290,28 +303,21 @@ select:focus {
   color: black;
 }
 
-.dropdown-content:hover {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .health-goal-left {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 
 .health-goal-right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 
 .health-goal-img {
   width: 100%;
-}
-
-.dropdown:hover .dropdown-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 
 /* .dropbtn:hover {s
@@ -775,6 +781,7 @@ select:focus {
 }
 
 .section8-heading {
+  font-size: 30px;
   color: #2e6e66;
 }
 
@@ -815,24 +822,25 @@ cite {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 5px;
+  width: 5px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: black;
+  height: 7px;
+  width: 7px;
 }
 
-/* Fading animation */
+/* Fading animation 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 5.5s;
 }
 
 @keyframes fade {
@@ -843,7 +851,7 @@ cite {
   to {
     opacity: 1;
   }
-}
+}*/
 
 /* Section9 */
 .section9 {
@@ -1012,41 +1020,35 @@ select:focus {
 
 /* Footer */
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #c2ede7;
   color: #2e6e66;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow-x: hidden;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 3rem;
+  width: 90%;
+  margin: auto;
 }
 .footer-container-heading {
   font-size: 19px;
   letter-spacing: 1px;
 }
 .footer-main-logo {
-  margin-right: 4rem;
-  height: 9rem;
-  width: 9rem;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
 }
 
 .footer-container-items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
 
-.footer-touch-item {
-  display: flex;
-  align-items: center;
+.footer-touch-item-p {
+  display: inline-block;
 }
 
 .touch-icon {
@@ -1059,6 +1061,14 @@ select:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
+}
+
+.bottom-footer {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1180px) {
@@ -1091,7 +1101,12 @@ select:focus {
   }
 
   .footer-container-items {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .accept {
+    grid-row: 2;
+    grid-column: 2;
   }
 }
 
@@ -1252,6 +1267,15 @@ select:focus {
   }
 
   /* Footer */
+  .footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-container {
+    width: 95%;
+    padding-bottom: 1rem;
+  }
   .footer-container-items {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -1284,5 +1308,9 @@ select:focus {
 
   .footer-main-logo {
     display: none;
+  }
+  .bottom-footer {
+    margin-left: 3%;
+    justify-content: flex-start;
   }
 }

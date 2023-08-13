@@ -32,14 +32,22 @@ window.onscroll = function () {
 var header = document.getElementById("nav");
 var sticky = header.offsetTop;
 let dropDown = document.getElementById("main-dropdown");
+let mainDDUL = document.getElementById("main-dropdown-ul");
+let healthGoalRight = document.getElementById("health-goal-right");
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
+  if (window.scrollY > sticky) {
     header.classList.add("sticky");
     dropDown.style.height = "7.6vh";
+    // if (!mainDDUL.style.contains("wrap")) {
+    //   healthGoalRight.style.gridTemplateColumns = "auto";
+    // } else {
+    //   dropDown.style.height = "7.6vh";
+    // }
   } else {
     header.classList.remove("sticky");
-    dropDown.style.height = "15vh";
+
+    dropDown.style.height = "17vh";
   }
 }
 
