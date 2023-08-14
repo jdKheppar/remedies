@@ -5,6 +5,8 @@ let hamburger = document.getElementById("hamburger-icon");
 let burger = document.getElementById("burger");
 let healthGoal = document.getElementById("hamburger-health-goal-inner");
 let productType = document.getElementById("hamburger-product-type-inner");
+let brands = document.getElementById("hamburger-brands-inner");
+
 let main = document.getElementById("main");
 
 //Hamburger Declarations
@@ -121,9 +123,10 @@ function hamburgerInner(n) {
   }
   if (n == 3) {
     mobileMenu.style.display = "none";
-    healthGoal.style.display = "flex";
-    healthGoal.style.color = "#2e6e66";
-    console.log("Hamburger Clikced");
+    brands.style.display = "flex";
+    brands.style.flexDirection = "column";
+    brands.style.color = "#2e6e66";
+
   }
 }
 
@@ -132,4 +135,5 @@ function hamburgerInnerBtn() {
   mobileMenu.style.display = "flex";
   healthGoalInner.style.display = "none";
   productType.style.display = "none";
+  brands.style.display = "none";
 }
