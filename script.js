@@ -76,16 +76,9 @@ function currentSlide(n) {
 
 function showSlides(n) {
   //Use transitions here instead of display none and flex
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
 
-  if (n > slides.length - 1) {
-    slideIndex = 9;
-  }
-  if (n < 2) {
-    slideIndex = 2;
-  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     slides[i].style.boxShadow = "none";
@@ -95,12 +88,25 @@ function showSlides(n) {
   }
 
   if (window.innerWidth > 771) {
-    slides[slideIndex].style.display = "flex";
-    slides[slideIndex - 2].style.display = "flex";
+    if (n === 10) {
+      slides[0].style.display = "flex";
+    }
+    else {
+      slides[n].style.display = "flex";
+    }
+    console.log("This is nothing");
+    if (n === 1) {
+      slides[9].style.display = "flex";
+    }
+    else {
+      slides[n - 2].style.display = "flex";
+    }
+
   }
-  slides[slideIndex - 1].style.boxShadow = "0px 0px 5px 8px #f8f8f8";
-  slides[slideIndex - 1].style.display = "flex";
-  dots[slideIndex - 1].className += " active";
+  slides[n - 1].style.boxShadow = "0px 0px 5px 8px #f8f8f8";
+  slides[n - 1].style.display = "flex";
+  dots[n - 1].className += " active";
+
 }
 
 // // For handling click on hamburger inner icons

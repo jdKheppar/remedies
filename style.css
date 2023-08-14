@@ -149,7 +149,7 @@ body {
   cursor: pointer;
 }
 
-.main-navbar-input:focus ~ .main-navbar-close {
+.main-navbar-input:focus~.main-navbar-close {
   margin-left: 75px;
   display: block;
   cursor: pointer;
@@ -243,16 +243,20 @@ select:focus {
   height: 70vh;
   /* height: auto; */
   padding: 30px;
-  margin-top: 0; /* Reset margin if needed */
-  margin-bottom: 0; /* Reset margin if needed */
+  margin-top: 0;
+  /* Reset margin if needed */
+  margin-bottom: 0;
+  /* Reset margin if needed */
   overflow: hidden;
   z-index: 10;
 }
+
 .dropdown:hover .dropdown-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
 }
+
 .health-goal-h3 {
   color: #2e6e66;
 }
@@ -380,6 +384,7 @@ select:focus {
   /* border-left: 0.5px solid #2e6e66; */
   border-left: 0.5px solid rgba(46, 110, 102, 0.4);
 }
+
 #dropdown-freeshipping:hover {
   text-decoration: underline var(--bg-clr-navbar) 2px;
   cursor: text;
@@ -431,6 +436,7 @@ select:focus {
   z-index: 5;
   margin-top: 10px;
 }
+
 .hamburger-inner-head-item {
   display: inline-block;
 }
@@ -995,10 +1001,12 @@ select:focus {
   width: 90%;
   margin: auto;
 }
+
 .footer-container-heading {
   font-size: 19px;
   letter-spacing: 1px;
 }
+
 .footer-main-logo {
   height: 100%;
   width: 100%;
@@ -1068,14 +1076,14 @@ select:focus {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+
   .accept {
     grid-row: 2;
     grid-column: 2;
   }
 }
 
-@media only screen and (max-width: 925px) {
-}
+@media only screen and (max-width: 925px) {}
 
 @media only screen and (max-width: 770px) {
   .top-navbar-icons {
@@ -1093,6 +1101,7 @@ select:focus {
     left: 10px;
     bottom: 10px;
   }
+
   .main-navbar-cart-para {
     display: none;
   }
@@ -1209,7 +1218,7 @@ select:focus {
 
   .section7-item-btn {
     border: none;
-    padding: 1.5rem 3.7rem;
+    padding: 1rem 3rem;
   }
 
   /* Section9 */
@@ -1243,6 +1252,7 @@ select:focus {
     width: 95%;
     padding-bottom: 1rem;
   }
+
   .footer-container-items {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -1276,7 +1286,9 @@ select:focus {
   .footer-main-logo {
     display: none;
   }
+
   .bottom-footer {
+    margin-top: 0rem;
     margin-left: 3%;
     justify-content: flex-start;
   }
