@@ -356,6 +356,7 @@ select:focus {
   width: 100%;
   margin-top: 10px;
   z-index: 3;
+  transition: transform 5s ease-in-out;
 }
 
 .mobile-menu {
@@ -368,6 +369,7 @@ select:focus {
 
   background-color: #f8f8f8;
   overflow: hidden;
+  transition: transform 5s ease-in-out;
 }
 
 .mobile-menu li {
@@ -405,9 +407,15 @@ select:focus {
   color: #2e6e66;
   width: 100%;
   border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .hamburger-dropdown {
@@ -424,7 +432,10 @@ select:focus {
 #hamburger-health-goal-inner,
 #hamburger-product-type-inner,
 #hamburger-brands-inner {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  color: #2e6e66;
+  transform: translateX(-100%);
   position: absolute;
   top: 15vh;
   left: 0;
@@ -437,8 +448,22 @@ select:focus {
   margin-top: 10px;
 }
 
-.hamburger-inner-head-item {
-  display: inline-block;
+.hamburger-inner-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hamburger-inner-head {
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Main */
@@ -741,87 +766,73 @@ select:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
+  /* justify-self: center; */
   overflow-x: hidden;
 }
 
-.section8-img {
-  height: 50px;
-  width: 40px;
-}
 
 .section8-heading {
   font-size: 30px;
   color: #2e6e66;
 }
 
-.mySlides {
-  display: none;
-  height: auto;
-  width: 100%;
-  align-items: center;
+.slick-dots {
+  display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Style each dot */
+.slick-dots li {
+  margin: 0 4px;
+}
+
+/* Style the inactive dot */
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  /* Adjust the dot size */
+  height: 10px;
+  /* Adjust the dot size */
+
+  /* Make the dot rounded */
+  background-color: #ccc;
+  /* Set the dot color */
+  border: none;
+  border-radius: 100%;
+  /* Remove the border */
+}
+
+/* Style the inactive dot */
+.slick-dots li button:hover {
+
+  background-color: black;
+
+}
+
+/* Style the active dot */
+.slick-dots li.slick-active button {
+  background-color: black;
+  /* Set the active dot color */
+  width: 12px;
+  /* Increase the active dot size */
+  height: 12px;
+  border-radius: 100%;
+  /* Increase the active dot size */
 }
 
 .fader__text {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-img {
-  vertical-align: middle;
+.section8-img {
+  height: 50px;
+  width: 40px;
 }
-
-cite {
-  font-weight: bold;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  display: flex;
-  height: auto;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 5px;
-  width: 5px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.active,
-.dot:hover {
-  background-color: black;
-  height: 7px;
-  width: 7px;
-}
-
-/* Fading animation 
-.fade {
-  animation-name: fade;
-  animation-duration: 5.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}*/
 
 /* Section9 */
 .section9 {
@@ -1043,11 +1054,20 @@ select:focus {
   justify-content: center;
 }
 
+
+@media only screen and (min-width: 1181) {
+  .main-dropdown {
+    height: 16vh;
+  }
+}
+
 @media only screen and (max-width: 1180px) {
   #shipping {
     display: none;
   }
 }
+
+
 
 @media only screen and (max-width: 1023px) {
   .main-dropdown {
@@ -1083,7 +1103,12 @@ select:focus {
   }
 }
 
-@media only screen and (max-width: 925px) {}
+@media only screen and (max-width: 906px) {
+
+  .main-dropdown {
+    height: 16vh;
+  }
+}
 
 @media only screen and (max-width: 770px) {
   .top-navbar-icons {
@@ -1291,5 +1316,11 @@ select:focus {
     margin-top: 0rem;
     margin-left: 3%;
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 771px) {
+  main {
+    display: block;
   }
 }

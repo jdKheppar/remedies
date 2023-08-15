@@ -5,6 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Remedies</title>
+  <!-- For Styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- jquery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -34,7 +44,7 @@
           </div>
         </div>
 
-        <div class="main-navbar-cart">
+        <div class="main-navbar-cart" id="cart-container">
           <img src="./assets/icons/shopping-cart.png" alt="CART" class="main-navbar-cart-icon" />
           <p class="main-navbar-cart-para">CART</p>
         </div>
@@ -96,9 +106,9 @@
               <div class="hamburger-inner-head" onclick="hamburgerInnerBtn()">
                 <img class="less-than hamburger-inner-head-item" src="./assets/icons/less-than-symbol.png"
                   alt="less than" />
-                <h2 class="underline hamburger-inner-head-item">
+                <h4 class="underline hamburger-inner-head-item">
                   Health Goal
-                </h2>
+                </h4>
               </div>
 
               <hr class="hamburger-hr" />
@@ -156,9 +166,9 @@
               <div class="hamburger-inner-head" onclick="hamburgerInnerBtn()">
                 <img class="less-than hamburger-inner-head-item" src="./assets/icons/less-than-symbol.png"
                   alt="less than" />
-                <h2 class="underline hamburger-inner-head-item">
+                <h4 class="underline hamburger-inner-head-item">
                   Product Type
-                </h2>
+                </h4>
               </div>
               <hr class="hamburger-hr" />
               <div class="hamburger-dropdown">
@@ -215,9 +225,9 @@
               <div class="hamburger-inner-head" onclick="hamburgerInnerBtn()">
                 <img class="less-than hamburger-inner-head-item" src="./assets/icons/less-than-symbol.png"
                   alt="less than" />
-                <h2 class="underline hamburger-inner-head-item">
-                  Product Type
-                </h2>
+                <h4 class="underline hamburger-inner-head-item">
+                  Brands
+                </h4>
               </div>
               <hr class="hamburger-hr" />
               <div class="hamburger-dropdown">
@@ -257,14 +267,14 @@
               <hr class="hamburger-hr" />
               <div class="hamburger-dropdown">
                 <button class="hamburger-dropbtn upper">
-                  <p>Amino Acids</p>
+                  <p>Enzymedica</p>
                   <img class="greater-than-symbol" src="./assets/icons/greater-than-symbol.png" alt="greater than" />
                 </button>
               </div>
               <hr class="hamburger-hr" />
               <div class="hamburger-dropdown">
                 <button class="hamburger-dropbtn upper">
-                  <p>Mushrooms</p>
+                  <p>View All</p>
                   <img class="greater-than-symbol" src="./assets/icons/greater-than-symbol.png" alt="greater than" />
                 </button>
               </div>
@@ -642,8 +652,8 @@
       </section>
       <section class="section8">
         <h1 class="section8-heading">FROM OUR CUSTOMERS</h1>
-        <div class="section8-carousel slideshow-container">
-          <div class="mySlides fade">
+        <div class="section8-carousel slideshow-container carousel-container">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -660,7 +670,7 @@
               <cite>Barbie Wools</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -676,7 +686,7 @@
               <cite>Cathy Howard</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -690,7 +700,7 @@
               <cite>Pentoda1</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -704,7 +714,7 @@
               <cite>Sammee G.</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -718,7 +728,7 @@
               <cite>Colecia Whitaker</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -732,7 +742,7 @@
               <cite>Clay Williams</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -750,7 +760,7 @@
               <cite>Kayla Campbell</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -772,7 +782,7 @@
               <cite>Bobby Shock</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -790,7 +800,7 @@
               <cite>Joshua Nicholas Costner</cite>
             </blockquote>
           </div>
-          <div class="mySlides fade">
+          <div class="slide fade">
             <blockquote class="fader__text">
               <span class="testimonial-stars">★★★★★</span>
               <div class="rte-setting text-spacing">
@@ -813,20 +823,6 @@
               <cite>Melvin Howard</cite>
             </blockquote>
           </div>
-        </div>
-        <br />
-
-        <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-          <span class="dot" onclick="currentSlide(8)"></span>
-          <span class="dot" onclick="currentSlide(9)"></span>
-          <span class="dot" onclick="currentSlide(10)"></span>
         </div>
       </section>
       <section class="section9">
@@ -984,7 +980,31 @@
       <span class="copy">© 2023 Remedies</span>
     </div>
   </footer>
+  <!-- // For script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(".carousel-container").slick({
+      autoplay: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 950,
+      dots: true,
+      arrows: false,
+      appendDots: $(".carousel-container"),
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- responsive: [
+        {
+          breakpoint: 770, // When screen width is 770px or less
+          settings: {
+            slidesToShow: 1, // Show only 1 slide
+          }
+        }
+      ] -->
