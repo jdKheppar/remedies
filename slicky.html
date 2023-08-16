@@ -76,6 +76,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 50px;
         margin: 5px;
       }
 
@@ -280,7 +281,7 @@
           arrows: false,
           appendDots: $(".carousel-container"),
           initialSlide: 1, // Start from slide index 1
-          //centerMode: true, // Disable center mode
+          centerMode: true, // Disable center mode
           responsive: [
             {
               breakpoint: 770, // When screen width is 770px or less
@@ -291,12 +292,6 @@
             },
           ],
         });
-        // Get the index of the currently active slide and set centralSlideIndex
-        var activeSlideIndex = $carousel.slick("slickCurrentSlide");
-        var centralSlideIndex = activeSlideIndex + 1;
-
-        // Simulate moving to the central slide after the carousel is initialized
-        $carousel.slick("slickGoTo", centralSlideIndex);
       });
     </script>
   </body>

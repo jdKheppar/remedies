@@ -857,8 +857,12 @@ select:focus {
   align-items: center;
   justify-content: center;
   margin: 5px;
+  padding: 50px;
 }
-
+.slick-current {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
 .section8-img {
   height: 50px;
   width: 40px;
@@ -1294,8 +1298,12 @@ select:focus {
     padding: 1rem 2.4rem;
   }
   /* section8 */
+  .section8-heading {
+    font-size: 20px;
+  }
   .fader__text {
     box-shadow: 0 10px 25px #0000001a;
+    transition: box-shadow 0.5s ease;
   }
   /* Section9 */
   .section9-container {
