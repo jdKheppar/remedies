@@ -23,11 +23,13 @@ burger.addEventListener("click", () => {
     brands.style.transform = "translateX(-100%)";
     mobileMenu.style.display = "none";
     cartContainer.style.display = "block";
+    searchBar.style.transform = "translateX(0)";
   } else {
     hamburger.classList.add("open");
     mobileMenu.style.display = "flex";
     main.style.display = "none";
     cartContainer.style.display = "none";
+    searchBar.style.transform = "translateX(-100%)";
   }
 });
 

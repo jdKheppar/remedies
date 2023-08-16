@@ -41,14 +41,14 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-clr-top-navbar);
-  font-weight: bold;
-  color: var(--main-font-color);
   width: 100%;
   height: 4.7vh;
 }
 
 .top-navbar-para {
   margin-left: 4%;
+  font-weight: bold;
+  color: var(--main-font-color);
 }
 
 .top-navbar-icons {
@@ -258,10 +258,12 @@ select:focus {
 }
 
 .health-goal-h3 {
+  margin: 0px;
   color: #2e6e66;
 }
 
 .health-goal-p {
+  margin: 0px;
   color: black;
 }
 
@@ -295,7 +297,7 @@ select:focus {
 
 .dropbtn:hover {
   text-decoration: underline black 2px;
-  text-underline-offset: 10px;
+  text-underline-offset: 12px;
 }
 
 /* Hamburger CSS */
@@ -305,7 +307,9 @@ select:focus {
 }
 
 #hamburger-icon {
-  margin: auto 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3vh;
   display: none;
   cursor: pointer;
 }
@@ -362,7 +366,7 @@ select:focus {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 15vh;
+  top: 8vh;
   left: 0;
   height: auto;
   padding: 20px;
@@ -375,12 +379,12 @@ select:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-radius: 20px;
   justify-content: flex-start;
   background-color: #f8f8f8;
   width: 95%;
   z-index: 3;
   transition: transform 5s ease-in-out;
-  border-radius: 20px;
 }
 
 .mobile-menu li {
@@ -461,7 +465,7 @@ select:focus {
   transform: translateX(-100%);
   transition: transform 0.1s ease-out;
   position: absolute;
-  top: 15vh;
+  top: 8vh;
   left: 0;
   height: auto;
   width: 100%;
@@ -1137,17 +1141,27 @@ select:focus {
   .top-navbar-icons {
     display: none;
   }
-
+  .top-navbar-para {
+    font-weight: normal;
+  }
   .main-navbar {
     position: relative;
-    height: 25vh;
+    height: 20vh;
+    align-items: flex-start;
+  }
+  .main-navbar-cart-icon {
+    position: absolute;
+    top: 3vh;
+    right: 14%;
   }
 
   .main-navbar-searchPbtn {
     position: absolute;
-    width: 95%;
-    left: 10px;
-    bottom: 10px;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
   }
 
   .main-navbar-cart-para {
@@ -1191,7 +1205,8 @@ select:focus {
 
   #hamburger-icon {
     display: block;
-    grid-area: two;
+
+    /* grid-area: two; */
   }
 
   /* .main-navbar-searchPbtn {
