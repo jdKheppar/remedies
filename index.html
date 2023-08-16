@@ -986,7 +986,6 @@
                 alt="naturalways"
               />
             </div>
-            <!-- <div class="section6-item"><img src="" alt="" /></div> -->
           </div>
         </section>
         <section class="section7">
@@ -1006,7 +1005,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     Been going to Remedies for years. Always a positive
                     experience. There is real healing there.
                   </p>
@@ -1026,7 +1025,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     Great people, great advice! And just lovely to visit with.
                   </p>
                 </div>
@@ -1045,7 +1044,9 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>Great place to get natural herbs</p>
+                  <p class="section8-carousel-slide-p">
+                    Great place to get natural herbs
+                  </p>
                 </div>
                 <div class="testimonail-image--round">
                   <div>
@@ -1062,7 +1063,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>Awesome!</p>
+                  <p class="section8-carousel-slide-p">Awesome!</p>
                 </div>
                 <div class="testimonail-image--round">
                   <div>
@@ -1079,7 +1080,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>Amazing!!!!!!</p>
+                  <p class="section8-carousel-slide-p">Amazing!!!!!!</p>
                 </div>
                 <div class="testimonail-image--round">
                   <div>
@@ -1096,7 +1097,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>Great experience</p>
+                  <p class="section8-carousel-slide-p">Great experience</p>
                 </div>
                 <div class="testimonail-image--round">
                   <div>
@@ -1113,7 +1114,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     Love this shop! They have a great selection and Hannah was
                     so knowledgeable and so helpful. I'll definitely be shopping
                     here again! Knowledgeable staff! Great selection!
@@ -1134,7 +1135,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     I have been dealing with arthritis in my neck since
                     2009....when it flares up it is debilitating for appx 24
                     hours....after talking with Dane and Chelsea about it Dane
@@ -1159,7 +1160,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     I cannot say enough about how helpful they are in helping us
                     select the best possible supplements. please give them a
                     try, you won't regret it!
@@ -1180,7 +1181,7 @@
               <blockquote class="fader__text">
                 <span class="testimonial-stars">★★★★★</span>
                 <div class="rte-setting text-spacing">
-                  <p>
+                  <p class="section8-carousel-slide-p">
                     These remedies can do what conventional medicine is not able
                     to do sometimes. They are also an assist for healthy living
                     that we cannot always get through our food. They have been
@@ -1221,6 +1222,7 @@
               <p>by Chelsea Etheridge</p>
             </div>
             <div class="section9-container-right">
+              <span id="verticalhr"></span>
               <h3>Latest posts</h3>
               <div class="section9-container-right-items">
                 <div class="section9-container-right-item">
@@ -1450,7 +1452,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
+    <script type="text/javascript">
       $(".carousel-container").slick({
         autoplay: false,
         slidesToShow: 3,
@@ -1459,17 +1461,17 @@
         dots: true,
         arrows: false,
         appendDots: $(".carousel-container"),
+        responsive: [
+          {
+            breakpoint: 770, // When screen width is 770px or less
+            settings: {
+              slidesToShow: 1, // Show only 1 slide
+              centerMode: false, // Disable center mode
+            },
+          },
+        ],
       });
     </script>
     <script src="script.js"></script>
   </body>
 </html>
-
-<!-- responsive: [
-        {
-          breakpoint: 770, // When screen width is 770px or less
-          settings: {
-            slidesToShow: 1, // Show only 1 slide
-          }
-        }
-      ] -->

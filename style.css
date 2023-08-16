@@ -240,7 +240,7 @@ select:focus {
   background-color: white;
   /* width: 97.5vw; */
   width: 100%;
-  height: 70vh;
+  height: 68vh;
   /* height: auto; */
   padding: 30px;
   margin-top: 0;
@@ -376,6 +376,7 @@ select:focus {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: #f8f8f8;
   width: 95%;
   z-index: 3;
   transition: transform 5s ease-in-out;
@@ -445,6 +446,9 @@ select:focus {
   border-radius: 20px;
   color: #2e6e66;
   background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 #hamburger-health-goal-inner,
 #hamburger-product-type-inner,
@@ -455,11 +459,11 @@ select:focus {
   justify-content: center;
   color: #2e6e66;
   transform: translateX(-100%);
+  transition: transform 0.1s ease-out;
   position: absolute;
   top: 15vh;
   left: 0;
   height: auto;
-  padding: 20px;
   width: 100%;
   background-color: #ffffff;
   overflow: hidden;
@@ -579,6 +583,7 @@ select:focus {
   padding: 1rem;
   flex: 1;
   cursor: pointer;
+  overflow: visible;
 }
 
 .section3_5-flex-item-img {
@@ -779,20 +784,22 @@ select:focus {
 }
 
 /* Section8 */
-
-.section8 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-self: center; */
-  overflow-x: hidden;
+.section8-carousel {
+  margin: 30px;
 }
 
 .section8-heading {
   font-size: 30px;
   color: #2e6e66;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.section8-carousel-slide-p {
+  /*width: 80%;*/
+  text-align: center;
+}
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -842,6 +849,7 @@ select:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 5px;
 }
 
 .section8-img {
@@ -885,7 +893,11 @@ select:focus {
 .section9-container-right {
   width: 100%;
 }
-
+#verticalhr {
+  height: 100%;
+  width: 8px;
+  background-color: black;
+}
 .section9-container-right-item {
   display: flex;
 }

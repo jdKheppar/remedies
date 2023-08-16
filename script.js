@@ -18,9 +18,9 @@ burger.addEventListener("click", () => {
   if (hamburger.classList.contains("open")) {
     hamburger.classList.remove("open");
     main.style.display = "block";
-    healthGoal.style.transform = 'translateX(-100%)';
-    productType.style.transform = 'translateX(-100%)';
-    brands.style.transform = 'translateX(-100%)';
+    healthGoal.style.transform = "translateX(-100%)";
+    productType.style.transform = "translateX(-100%)";
+    brands.style.transform = "translateX(-100%)";
     mobileMenu.style.display = "none";
     cartContainer.style.display = "block";
   } else {
@@ -55,8 +55,7 @@ function myFunction() {
     header.classList.add("sticky");
     if (window.innerWidth > 770 && window.innerWidth < 907) {
       dropDown.style.height = "16vh";
-    }
-    else {
+    } else {
       dropDown.style.height = "7.6vh";
     }
 
@@ -72,29 +71,26 @@ function myFunction() {
   }
 }
 
-
-
 // // For handling click on hamburger inner icons
 
 function hamburgerInner(n) {
   if (n == 1) {
     mobileMenu.style.display = "none";
-    healthGoalInner.style.transform = 'translateX(0)';
+    healthGoalInner.style.transform = "translateX(0)";
   }
   if (n == 2) {
     mobileMenu.style.display = "none";
-    productType.style.transform = 'translateX(0)';
+    productType.style.transform = "translateX(0)";
   }
   if (n == 3) {
     mobileMenu.style.display = "none";
-    brands.style.transform = 'translateX(0)';
+    brands.style.transform = "translateX(0)";
   }
 }
 
 function hamburgerInnerBtn() {
-  console.log("I am clicked");
   mobileMenu.style.display = "flex";
-  healthGoal.style.transform = 'translateX(100%)';
-  productType.style.transform = 'translateX(100%)';
-  brands.style.transform = 'translateX(100%)';
+  healthGoal.style.transform = "translateX(100%)";
+  productType.style.transform = "translateX(100%)";
+  brands.style.transform = "translateX(100%)";
 }
