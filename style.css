@@ -149,7 +149,7 @@ body {
   cursor: pointer;
 }
 
-.main-navbar-input:focus~.main-navbar-close {
+.main-navbar-input:focus ~ .main-navbar-close {
   margin-left: 75px;
   display: block;
   cursor: pointer;
@@ -301,7 +301,7 @@ select:focus {
 /* Hamburger CSS */
 
 .mobile-view-container {
-  width: 100%;
+  width: 95%;
 }
 
 #hamburger-icon {
@@ -428,12 +428,21 @@ select:focus {
   border: 1px solid #2e6e66;
   width: 100%;
 }
-
+.hamburger-sub-inner {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  border-radius: 20px;
+  color: #2e6e66;
+  background-color: #f8f8f8;
+}
 #hamburger-health-goal-inner,
 #hamburger-product-type-inner,
 #hamburger-brands-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #2e6e66;
   transform: translateX(-100%);
   position: absolute;
@@ -442,7 +451,7 @@ select:focus {
   height: auto;
   padding: 20px;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   overflow: hidden;
   z-index: 5;
   margin-top: 10px;
@@ -459,7 +468,6 @@ select:focus {
 }
 
 .hamburger-inner-head {
-
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
@@ -770,7 +778,6 @@ select:focus {
   overflow-x: hidden;
 }
 
-
 .section8-heading {
   font-size: 30px;
   color: #2e6e66;
@@ -806,9 +813,7 @@ select:focus {
 
 /* Style the inactive dot */
 .slick-dots li button:hover {
-
   background-color: black;
-
 }
 
 /* Style the active dot */
@@ -1054,7 +1059,6 @@ select:focus {
   justify-content: center;
 }
 
-
 @media only screen and (min-width: 1181) {
   .main-dropdown {
     height: 16vh;
@@ -1066,8 +1070,6 @@ select:focus {
     display: none;
   }
 }
-
-
 
 @media only screen and (max-width: 1023px) {
   .main-dropdown {
@@ -1104,7 +1106,6 @@ select:focus {
 }
 
 @media only screen and (max-width: 906px) {
-
   .main-dropdown {
     height: 16vh;
   }
