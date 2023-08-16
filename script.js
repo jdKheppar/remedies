@@ -55,17 +55,6 @@ let healthGoalRight = document.getElementById("health-goal-right");
 function myFunction() {
   if (window.scrollY > sticky) {
     header.classList.add("sticky");
-    if (window.innerWidth > 770 && window.innerWidth < 907) {
-      dropDown.style.height = "16vh";
-    } else {
-      dropDown.style.height = "7.6vh";
-    }
-
-    // if (!mainDDUL.style.contains("wrap")) {
-    //   healthGoalRight.style.gridTemplateColumns = "auto";
-    // } else {
-    //   dropDown.style.height = "7.6vh";
-    // }
   } else {
     header.classList.remove("sticky");
 
