@@ -364,7 +364,7 @@ select:focus {
   z-index: 3;
   background-color: #ffffff;
   overflow: hidden;
-  transition: transform 2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .mobile-menu-inner {
   display: flex;
@@ -576,7 +576,7 @@ select:focus {
 }
 
 .section3_5-flex-item {
-  border: 1px solid silver;
+  border: 1px solid rgba(192, 192, 192, 0.5);
   position: relative;
   padding: 1rem;
   flex: 1;
