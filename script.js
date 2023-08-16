@@ -69,7 +69,7 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
 
-    dropDown.style.height = "17vh";
+    // dropDown.style.height = "17vh";
   }
 }
 
