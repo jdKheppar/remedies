@@ -236,7 +236,7 @@ select:focus {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 7.6vh;
+  top: 7.5vh;
   left: 0;
   background-color: white;
   /* width: 97.5vw; */
@@ -447,7 +447,7 @@ select:focus {
 .hamburger-sub-inner {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 95%;
   border-radius: 20px;
   color: #2e6e66;
   background-color: #f8f8f8;
@@ -465,6 +465,7 @@ select:focus {
   color: #2e6e66;
   transform: translateX(-100%);
   transition: transform 0.1s ease-out;
+  padding: 20px;
   position: absolute;
   top: 8vh;
   left: 0;
@@ -899,14 +900,20 @@ select:focus {
 .section9-container-left-img {
   width: 100%;
 }
+#verticalhr {
+  height: 100%;
+}
 
 .section9-container-right {
+  display: flex;
   width: 100%;
 }
 #verticalhr {
-  height: 100%;
-  width: 8px;
+  height: 75%;
+  width: 4px;
+  opacity: 0.1;
   background-color: black;
+  margin-right: 5%;
 }
 .section9-container-right-item {
   display: flex;
@@ -1066,7 +1073,11 @@ select:focus {
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 }
-
+.footer-touch-item,
+.footer-support-item,
+.footer-quick-item {
+  cursor: pointer;
+}
 .footer-touch-item-p {
   display: inline-block;
 }
@@ -1143,6 +1154,21 @@ select:focus {
 @media only screen and (max-width: 906px) {
   .main-dropdown {
     height: 16vh;
+  }
+  .dropdown-content {
+    top: 6vh;
+  }
+}
+@media only screen and (max-width: 945px) {
+  .health-goal-right {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+    /* height: 100%; */
+  }
+  .health-goal-img {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -1302,7 +1328,7 @@ select:focus {
   }
   .fader__text {
     box-shadow: 0 10px 25px #0000001a;
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 1s ease;
   }
   /* Section9 */
   .section9-container {
