@@ -9,6 +9,7 @@ let brands = document.getElementById("hamburger-brands-inner");
 let cartContainer = document.getElementById("cart-container");
 
 let main = document.getElementById("main");
+let searchClose = document.getElementById("searchClose");
 
 //Hamburger Declarations
 let mobileMenu = document.getElementById("mobile-menu");
@@ -21,6 +22,9 @@ burger.addEventListener("click", () => {
     mobileMenu.style.display = "none";
     cartContainer.style.display = "block";
     searchBar.style.transform = "translateX(0)";
+    healthGoal.style.transform = "translateX(-100%";
+    productType.style.transform = "translateX(-100%";
+    brands.style.transform = "translateX(-100%";
   } else {
     hamburger.classList.add("open");
     mobileMenu.style.display = "flex";
@@ -32,21 +36,26 @@ burger.addEventListener("click", () => {
 
 let cartCont = document.getElementById("cart-container");
 let closeCont = document.getElementById("close-container");
+let cartMessage = document.getElementById("site-header");
 
 cartCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "none";
+    searchBar.style.display = "none";
   }
-  cartCont.style.display = "none";
+  //cartCont.style.display = "none";
   closeCont.style.display = "flex";
+  cartMessage.style.display = "flex";
 });
 
 closeCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "block";
+    searchBar.style.display = "flex";
   }
   closeCont.style.display = "none";
-  cartCont.style.display = "flex";
+  //cartCont.style.display = "flex";
+  cartMessage.style.display = "none";
 });
 
 // For reference, there also exists a toggle function
@@ -67,19 +76,35 @@ var sticky = header.offsetTop;
 let dropDown = document.getElementById("main-dropdown");
 let mainDDUL = document.getElementById("main-dropdown-ul");
 let healthGoalRight = document.getElementById("health-goal-right");
+let hideSearch = document.getElementById("hide-search");
+let mainNavbarMainLogo = document.getElementById("main-navbar-main-logo");
 
 function myFunction() {
   if (window.scrollY > sticky) {
     header.classList.add("sticky");
+    if (window.innerWidth < 771) {
+      hideSearch.style.display = "block";
+      searchBar.style.display = "none";
+    }
   } else {
     header.classList.remove("sticky");
 
-    // dropDown.style.height = "17vh";
+    if (window.innerWidth < 771) {
+      hideSearch.style.display = "none";
+      searchBar.style.display = "flex";
+    }
   }
 }
+hideSearch.addEventListener("click", function () {
+  searchBar.style.display = "flex";
+  searchBar.style.bottom = "20px";
+  hideSearch.style.display = "none";
+  mainNavbarMainLogo.style.display = "none";
+  cartCont.style.display = "none";
+  burger.style.display = "none";
+});
 
 // // For handling click on hamburger inner icons
-
 function hamburgerInner(n) {
   if (n == 1) {
     mobileMenu.style.display = "none";
