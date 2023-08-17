@@ -85,3 +85,40 @@ function hamburgerInnerBtn() {
   productType.style.transform = "translateX(100%)";
   brands.style.transform = "translateX(100%)";
 }
+
+// For handling the Modal
+
+const openModalButtons = document.querySelectorAll(".openModalBtn");
+
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal");
+    document.getElementById(modalId).style.display = "block";
+  });
+});
+
+const closeButtons = document.querySelectorAll(".close");
+
+closeButtons.forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    closeButton.closest(".modal").style.display = "none";
+  });
+});
+
+//For Handling plus minus on Modal
+$(document).ready(function () {
+  $(".modal-minus").click(function () {
+    var $input = $(this).parent().find("input");
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $(".modal-plus").click(function () {
+    var $input = $(this).parent().find("input");
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
+});

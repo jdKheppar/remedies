@@ -292,6 +292,24 @@
             },
           ],
         });
+
+        // Calculate and set the maximum height of visible slides
+        function setMaxSlideHeight() {
+          var maxSlideHeight = 0;
+          $(".slick-current .fader__text").each(function () {
+            var slideHeight = $(this).outerHeight();
+            if (slideHeight > maxSlideHeight) {
+              maxSlideHeight = slideHeight;
+            }
+          });
+          $(".slick-slide").css("height", maxSlideHeight + "px");
+        }
+
+        // Call the function when slick initializes and after slide change
+        $(".carousel-container").on(
+          "init reInit reInit setPosition",
+          setMaxSlideHeight
+        );
       });
     </script>
   </body>
