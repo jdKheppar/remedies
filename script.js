@@ -30,6 +30,25 @@ burger.addEventListener("click", () => {
   }
 });
 
+let cartCont = document.getElementById("cart-container");
+let closeCont = document.getElementById("close-container");
+
+cartCont.addEventListener("click", function () {
+  if (window.innerWidth < 771) {
+    burger.style.display = "none";
+  }
+  cartCont.style.display = "none";
+  closeCont.style.display = "flex";
+});
+
+closeCont.addEventListener("click", function () {
+  if (window.innerWidth < 771) {
+    burger.style.display = "block";
+  }
+  closeCont.style.display = "none";
+  cartCont.style.display = "flex";
+});
+
 // For reference, there also exists a toggle function
 // burger.addEventListener("click", () => {
 //   hamburger.classList.toggle("open");
