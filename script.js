@@ -18,9 +18,6 @@ burger.addEventListener("click", () => {
   if (hamburger.classList.contains("open")) {
     hamburger.classList.remove("open");
     main.style.display = "block";
-    healthGoal.style.transform = "translateX(-100%)";
-    productType.style.transform = "translateX(-100%)";
-    brands.style.transform = "translateX(-100%)";
     mobileMenu.style.display = "none";
     cartContainer.style.display = "block";
     searchBar.style.transform = "translateX(0)";

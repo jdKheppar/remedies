@@ -613,8 +613,8 @@ select:focus {
 .sold-out {
   color: black;
   background-color: white;
-  height: 20px;
-  width: 90px;
+  height: 18px;
+  width: 80px;
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -623,8 +623,8 @@ select:focus {
 .search-g {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: -10px;
   padding: 10px;
   background-color: #b7e2de;
   border-radius: 100%;
@@ -645,7 +645,7 @@ select:focus {
 }
 
 .modal-content {
-  background-color: #f8f8f8;
+  background-color: white;
   width: 80%;
   margin: 40px auto;
   padding: 20px;
@@ -656,8 +656,8 @@ select:focus {
 
 .close {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -20px;
+  right: -10px;
   cursor: pointer;
   padding: 6px;
   background-color: #c9e9e6;
@@ -682,9 +682,22 @@ select:focus {
 .modal-body-container-top {
   display: flex;
 }
-
-.sales_points li {
-  list-style: none;
+.modal-body-container-right {
+  padding: 40px;
+}
+.product-single__title {
+  font-size: 36px;
+}
+.sales_points {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.inventory--low {
+  color: #f4af29;
+}
+.collapsibles--product-description {
+  padding: 10%;
+  width: 100%;
 }
 
 .add-to-cart {
@@ -699,11 +712,8 @@ select:focus {
 .modal-minus,
 .modal-plus {
   width: 20px;
-
-  background: #f2f2f2;
-  border-radius: 4px;
   padding: 5px;
-  border: 1px solid #ddd;
+  border: none;
   display: inline-block;
 
   text-align: center;
@@ -711,11 +721,10 @@ select:focus {
 }
 .modal-input {
   height: 34px;
-  width: 100px;
+  width: 30px;
   text-align: center;
-  font-size: 26px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  font-size: 18px;
+  border: none;
   display: inline-block;
   vertical-align: middle;
 }
@@ -725,8 +734,8 @@ select:focus {
 .plus {
   display: none;
   position: absolute;
-  top: 15%;
-  right: 0;
+  top: 10%;
+  right: -10px;
   padding: 10px;
   background-color: #b7e2de;
   border-radius: 100%;
@@ -1309,7 +1318,7 @@ select:focus {
   }
 
   .sold-out {
-    bottom: 10px;
+    bottom: 2px;
     left: 5px;
   }
 
@@ -1387,7 +1396,17 @@ select:focus {
     overflow: hidden;
     overflow-x: auto;
   }
-
+  .section3_5-flex-item:hover .search-g {
+    display: none;
+  }
+  .plus {
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: #b7e2de;
+    border-radius: 0;
+    border-bottom-left-radius: 50%;
+  }
   .section3_5-flex-item {
     flex-grow: 1;
     flex-shrink: 0;
@@ -1420,6 +1439,13 @@ select:focus {
     justify-content: center;
   }
 
+  .search-g:hover {
+    padding: initial;
+  }
+
+  .plus:hover {
+    padding: 12px;
+  }
   .section7-item-btn {
     border: none;
     padding: 1rem 2rem;
