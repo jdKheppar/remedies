@@ -3,777 +3,261 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Modal Example</title>
     <style>
-      *,
-      ::before,
-      ::after {
-        box-sizing: border-box;
-      }
-
-      /* * {
-  outline: 1px solid red;
-} */
-
-      html {
-        padding: 0;
-        margin: 0;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-      }
-
-      :root {
-        --bg-clr-navbar: #c9e9e6;
-        --bg-clr-top-navbar: #faf7e6;
-        --main-font-color: #2e6e66;
-        --colorNavText: #00544f;
-      }
-
-      .upper {
-        text-transform: uppercase;
-      }
-
-      .bg-white:hover {
-        background-color: white;
-      }
-
-      /* Top Navbar */
-
-      .top-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--bg-clr-top-navbar);
-        width: 100%;
-        height: 4.7vh;
-      }
-
-      .top-navbar-para {
-        margin-left: 4%;
-        font-weight: bold;
-        color: var(--main-font-color);
-      }
-
-      .top-navbar-icons {
-        margin-right: 4%;
-        display: flex;
-      }
-
-      .top-navbar-icon-insta {
-        margin-right: 16%;
-        height: 16px;
-        width: 16px;
-      }
-
-      .top-navbar-icon-db {
-        height: 16px;
-        width: 16px;
-      }
-
-      /* Main Navbar */
-
-      .main-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 17vh;
-        background-color: var(--bg-clr-navbar);
-        width: 100%;
-      }
-
-      .main-navbar-main-logo {
-        margin-left: 3rem;
-        height: 90px;
-      }
-
-      .main-navbar-logoPsearch {
-        display: flex;
-      }
-
-      .main-navbar-searchPbtn {
-        align-self: center;
-        display: flex;
-      }
-
-      .main-navbar-input {
-        height: 45px;
-        width: 30vw;
-        padding-left: 10px;
-        text-align: left;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        border: none;
-      }
-
-      .main-navbar-input::placeholder {
-        color: #c4764f;
-      }
-
-      .main-navbar-search-icon {
-        padding: 0;
-        border: none;
-        height: 32px;
-        width: 32px;
-      }
-
-      .main-navbar-btn {
-        background-color: #fff;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        padding-right: 1rem;
-        border: none;
-      }
-
-      .main-navbar-close {
+      /* Modal Styling */
+      .modal {
         display: none;
-        background-color: transparent;
-        border: none;
-      }
-
-      .main-navbar-cart {
-        display: flex;
-        align-items: center;
-      }
-
-      .main-navbar-cart-icon {
-        height: 32px;
-        width: 32px;
-        margin-right: 10px;
-      }
-
-      .main-navbar-cart-para {
-        margin-right: 20px;
-        color: var(--colorNavText);
-        letter-spacing: 1px;
-      }
-
-      .cart-logo {
-        height: 40px;
-        cursor: pointer;
-      }
-
-      .main-navbar-input:focus ~ .main-navbar-close {
-        margin-left: 75px;
-        display: block;
-        cursor: pointer;
-      }
-
-      .main-navbar-input:focus,
-      textarea:focus,
-      select:focus {
-        outline: none;
-        width: 25vw;
-      }
-
-      /* Hr */
-
-      #header-hr {
-        border: none;
-        border-top: 0.5px solid #2e6e66;
-        margin: 0;
-        padding: 0;
-        opacity: 0.4;
-        z-index: 90;
-      }
-
-      /* Main Dropdown */
-      .sticky {
         position: fixed;
+        z-index: 1;
+        left: 0;
         top: 0;
         width: 100%;
-        z-index: 4;
-      }
-
-      .main-dropdown {
-        width: 100%;
-        height: 7.4vh;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        background-color: var(--bg-clr-navbar);
-        color: #2e6e66;
-        position: relative;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-
-      #shipping button {
-        color: #c4764f;
-      }
-
-      .main-dropdown ul li {
-        list-style: none;
-        overflow-x: hidden;
-      }
-
-      .main-dropdown ul {
-        margin-top: 0;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        overflow-x: hidden;
-      }
-
-      /* Main Dropdown */
-
-      .dropbtn {
-        background-color: var(--bg-clr-navbar);
-        color: #2e6e66;
-        padding: 16px;
-        width: 100%;
-        font-size: 16px;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        letter-spacing: 1.4px;
-      }
-
-      .dropdown {
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 7.5vh;
-        left: 0;
-        background-color: white;
-        /* width: 97.5vw; */
-        width: 100%;
-        height: 68vh;
-        /* height: auto; */
-        padding: 30px;
-        /* overflow: hidden; */
-        z-index: 10;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: flex;
-      }
-
-      .health-goal-h3 {
-        margin: 0px;
-        color: #2e6e66;
-      }
-
-      .health-goal-p {
-        margin: 0px;
-        color: black;
-      }
-
-      .health-goal-left {
-        flex: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .health-goal-right {
-        flex: 1;
-        display: flex;
-      }
-      .health-goal-img-item {
-        width: 100%;
         height: 100%;
-      }
-      .health-goal-img {
-        max-width: 100%;
-        max-height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        overflow: auto;
       }
 
-      /* .dropbtn:hover {s
-  background-color: white;
-} */
-      .dropdown-white:hover {
-        background-color: white;
+      .modal-content {
+        background-color: #f8f8f8;
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        padding-right: 0px;
+        border-radius: 10px;
+        position: relative;
       }
 
-      .dropdown-trans:hover {
-        background-color: var(--bg-clr-navbar);
-      }
-
-      .dropbtn:hover {
-        text-decoration: underline black 2px;
-        text-underline-offset: 12px;
-      }
-
-      /* Hamburger CSS */
-
-      .mobile-view-container {
-        width: 100%;
-      }
-
-      #hamburger-icon {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 3vh;
-        display: none;
-        cursor: pointer;
-      }
-
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 30px;
-        height: 2px;
-        background-color: #2e6e66;
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-
-      #bar2 {
-        width: 25px;
-      }
-
-      .greater-than {
-        height: 15px;
-        width: 15px;
-        margin-right: 20px;
-      }
-
-      /* #bar2 {
-  width: 90px;
-} */
-
-      .open .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-        transform: rotate(-45deg) translate(-6px, 6px);
-      }
-
-      .open .bar2 {
-        opacity: 0;
-      }
-
-      .open .bar3 {
-        -webkit-transform: rotate(45deg) translate(-6px, -8px);
-        transform: rotate(45deg) translate(-6px, -6px);
-      }
-
-      .open .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .mobile-menu {
-        display: none;
+      .close {
         position: absolute;
-        top: 8vh;
-        left: 0;
-        height: auto;
-        padding: 20px;
-        width: 100%;
-        margin-top: 10px;
-        z-index: 3;
-        background-color: #ffffff;
-        overflow: hidden;
-        transition: transform 2s ease-in-out;
-      }
-      .mobile-menu-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        padding: 20px;
-        justify-content: flex-start;
-        background-color: #f8f8f8;
-        width: 95%;
-        z-index: 3;
-      }
-
-      .mobile-menu li {
-        margin-bottom: 10px;
-        width: 100%;
-        list-style: none;
-      }
-
-      .dropdown-unchanged:hover {
-        background-color: var(--bg-clr-navbar);
-      }
-
-      #dropdown-freeshipping {
-        /* border-left: 0.5px solid #2e6e66; */
-        border-left: 0.5px solid rgba(46, 110, 102, 0.4);
-      }
-
-      #dropdown-freeshipping:hover {
-        text-decoration: underline var(--bg-clr-navbar) 2px;
-        cursor: text;
-      }
-
-      .main-img {
-        width: 100%;
-      }
-
-      /* Hamburger Dropdown */
-
-      .mobile-menu {
-        padding-top: 20px;
-      }
-
-      .hamburger-dropbtn {
-        background-color: #f8f8f8;
-        color: #2e6e66;
-        width: 100%;
-        border: none;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-
+        top: 0px;
+        right: 0px;
         cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 6px;
+        background-color: #c9e9e6;
+        border-radius: 100%;
+      }
+      .icon-close {
+        width: 28px;
+        height: 28px;
       }
 
-      .hamburger-dropdown {
-        /* position: relative; */
-        display: inline-block;
-        width: 100%;
-      }
-
-      .hamburger-hr {
-        border: 0.5px solid #2e6e66;
-        width: 100%;
-      }
-      .hamburger-sub-inner {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-        border-radius: 20px;
-        color: #2e6e66;
-        background-color: #f8f8f8;
-        padding: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      #hamburger-health-goal-inner,
-      #hamburger-product-type-inner,
-      #hamburger-brands-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #2e6e66;
-        transform: translateX(-100%);
-        transition: transform 0.2s ease-out;
-        padding: 20px;
-        position: absolute;
-        top: 8vh;
-        left: 0;
-        height: auto;
-        width: 100%;
-        background-color: #ffffff;
-        overflow: hidden;
-        z-index: 5;
-        margin-top: 10px;
-      }
-
-      .hamburger-inner-head {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      .hamburger-inner-head {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      @media only screen and (max-width: 1250px) {
-        #shipping {
-          display: none;
-        }
-      }
-      @media only screen and (min-width: 1181) {
-        .main-dropdown {
-          height: 16vh;
-        }
-      }
-
-      @media only screen and (max-width: 1023px) {
-        .main-dropdown {
-          align-items: flex-start;
-          justify-content: space-between;
-          /* flex-wrap: wrap; */
-          font-weight: bold;
-          padding: 0.1rem 1.5rem;
-        }
-      }
-
-      @media only screen and (max-width: 906px) {
-        .main-dropdown {
-          height: 16vh;
-        }
-        .dropdown-content {
-          top: 6vh;
-        }
-      }
-      @media only screen and (max-width: 945px) {
-        .health-goal-right {
-          grid-template-rows: repeat(2, 1fr);
-          grid-template-columns: repeat(1, 1fr);
-
-          /* height: 100%; */
-        }
-        .health-goal-img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      @media only screen and (min-width: 771px) and (max-width: 906px) {
-        .main-dropdown {
-          height: 16vh;
-        }
-      }
-
-      @media only screen and (max-width: 770px) {
-        .top-navbar {
-          justify-content: center;
-        }
-        .top-navbar-icons {
-          display: none;
-        }
-        .top-navbar-para {
-          font-weight: normal;
-        }
-        .main-navbar {
-          position: relative;
-          height: 20vh;
-          align-items: flex-start;
-        }
-        .main-navbar-cart-icon {
-          position: absolute;
-          top: 3vh;
-          right: 14%;
-        }
-
-        .main-navbar-searchPbtn {
-          position: absolute;
-          width: 100%;
-          left: 0;
-          bottom: 5px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .main-navbar-cart-para {
-          display: none;
-        }
-
-        .main-navbar-input {
-          width: 80%;
-        }
-
-        .main-navbar-input:focus,
-        textarea:focus,
-        select:focus {
-          outline: none;
-          width: 60%;
-        }
-
-        .sold-out {
-          bottom: 10px;
-          left: 5px;
-        }
-
-        .dropdown {
-          width: 100%;
-        }
-
-        .dropbtn {
-          display: flex;
-          justify-content: space-between;
-          background-color: #f8f8f8;
-          width: 100vw;
-        }
-
-        .main-dropdown {
-          display: none;
-        }
-
-        #main-dropdown {
-          display: none;
-        }
-
-        #hamburger-icon {
-          display: block;
-        }
-
-        /* .main-navbar-searchPbtn {
-    display: none;
-  } */
-        .main-navbar-main-logo {
-          margin-left: 0.5rem;
-          height: 70px;
-        }
+      /* Additional Styling for Scrollable Content */
+      .modal-body {
+        max-height: 80vh;
+        overflow-y: auto;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="top-navbar" id="top-navbar">
-        <p class="top-navbar-para">
-          50% off all products for the next few days. Hurry!
-        </p>
-        <div class="top-navbar-icons">
-          <img
-            class="top-navbar-icon-insta"
-            src="./assets/icons/instagram.png"
-            alt="insta"
-          />
-          <img
-            class="top-navbar-icon-fb"
-            src="./assets/icons/facebook-app-symbol.png"
-            alt="insta"
-          />
-        </div>
-      </div>
-      <div class="nav" id="nav">
-        <div class="main-navbar">
-          <div class="main-navbar-logoPsearch">
-            <img
-              class="main-navbar-main-logo"
-              src="./assets/icons/remedies.png"
-              alt="Remedies"
-            />
-            <div class="main-navbar-searchPbtn" id="search-bar">
-              <input
-                type="text"
-                placeholder="  Search by products, brands or health goals"
-                class="main-navbar-input"
-              />
-              <button class="main-navbar-btn">
-                <img
-                  class="main-navbar-search-icon"
-                  src="./assets/icons/icons8-search-30.png"
-                  alt="search"
-                />
-              </button>
-              <button class="main-navbar-close">
-                <img
-                  src="./assets/icons/close.png"
-                  alt="close"
-                  class="main-navbar-img-close"
-                />
-              </button>
-            </div>
-          </div>
+    <button id="openModalBtn">Open Modal</button>
 
-          <div class="main-navbar-cart" id="cart-container">
-            <img
-              src="./assets/icons/shopping-cart.png"
-              alt="CART"
-              class="main-navbar-cart-icon"
-            />
-            <p class="main-navbar-cart-para">CART</p>
-          </div>
-        </div>
-        <hr id="header-hr" />
-        <div class="main-dropdown" id="main-dropdown">
-          <ul id="main-dropdown-ul">
-            <li>
-              <div class="dropdown dropdown-trans">
-                <button id="dropdown-unchanged" class="dropbtn upper">
-                  home
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown">
-                <button class="dropbtn upper dropdown-white">
-                  health goal
-                </button>
-                <div class="dropdown-content">
-                  <div class="health-goal-left">
-                    <h3 class="health-goal-h3">Immune Boosters</h3>
-                    <p class="health-goal-p">Alpha Lipoic Acid</p>
-                    <p class="health-goal-p">Zinc Chelate</p>
-                    <h3 class="health-goal-h3">Shop All</h3>
-                    <h3 class="health-goal-h3">digestive</h3>
-                    <p class="health-goal-p">DBR Hiatal Health</p>
-                    <p class="health-goal-p">Baxyl</p>
-                    <h3 class="health-goal-h3">Mood And Anxiety</h3>
-                    <h3 class="health-goal-h3">Shop All</h3>
-                    <p class="health-goal-p">DBR Emotional Ease</p>
-                    <p class="health-goal-p">Choline &amp; Inositol Caps</p>
-                    <p class="health-goal-p">ŐSI MAGNESIUM Oil</p>
-                    <h3 class="health-goal-h3">Sleep</h3>
-                    <h3 class="health-goal-h3">Shop All</h3>
-                    <h3 class="health-goal-h3">Heart Health</h3>
-                    <h3 class="health-goal-h3">Shop All</h3>
-                    <p class="health-goal-p">Hylands- Restful Legs</p>
-                    <p class="health-goal-p">Co Enzyme Q10</p>
-                    <h3 class="health-goal-h3">Shop All</h3>
-                    <h3 class="health-goal-h3">All Products</h3>
-                  </div>
-                  <div class="health-goal-right" id="health-goal-right">
-                    <div class="health-goal-img-item">
-                      <img
-                        src="./assets/imgs/dropdown/1.png"
-                        alt="one"
-                        class="health-goal-img"
-                      />
-                    </div>
-                    <div class="health-goal-img-item">
-                      <img
-                        src="./assets/imgs/dropdown/2.png"
-                        alt="two"
-                        class="health-goal-img"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown">
-                <button class="dropbtn upper dropdown-white">
-                  product type
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown">
-                <button class="dropbtn upper dropdown-white">brands</button>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown dropdown-trans">
-                <button class="dropbtn upper dropdown-unchanged">
-                  new year's starter kit
-                </button>
-              </div>
-            </li>
-            <li>
-              <div class="dropdown dropdown-trans" id="shipping">
-                <button
-                  id="dropdown-freeshipping"
-                  class="dropbtn upper dropdown-unchanged"
-                >
-                  <img src="./assets/icons/navShip.svg" alt="navship" />
-                  FAST, FREE SHIPPING OVER $49
-                </button>
-              </div>
-            </li>
-          </ul>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+            class="icon icon-close"
+            viewBox="0 0 64 64"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #000;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <path
+              class="cls-1"
+              d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+            ></path>
+          </svg>
+        </span>
+        <div class="modal-body">
+          <!-- Scrollable content goes here -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            iaculis, risus sit amet faucibus rhoncus, leo urna bibendum enim,
+            quis pretium eros sem sit amet arcu. Vestibulum metus risus, dapibus
+            fringilla viverra a, malesuada nec lectus. Morbi vel metus et nisi
+            varius pulvinar. Maecenas faucibus gravida lorem, quis vestibulum
+            ipsum vulputate quis. Fusce sit amet tempor tortor. Phasellus
+            fermentum consequat condimentum. Ut at magna dapibus, molestie enim
+            eu, feugiat sapien. Donec efficitur maximus ex, id lacinia mauris
+            pulvinar sit amet. Mauris non libero a dui laoreet commodo sed vitae
+            lectus. Nunc massa nunc, maximus at aliquet eu, gravida a metus.
+            Aenean vel magna odio. Donec dignissim felis eu mauris imperdiet
+            vehicula nec id magna. Pellentesque quis sem leo. Sed efficitur
+            eleifend odio sit amet semper. In sit amet metus nulla. Morbi
+            maximus vel arcu sit amet lobortis. Aliquam pharetra, velit et
+            ultrices porttitor, dui lorem gravida enim, eu aliquam lorem ligula
+            in purus. Nulla bibendum ex eu posuere cursus. Pellentesque auctor
+            diam erat, in vehicula urna lobortis nec. Nam id lectus sem. Duis
+            malesuada consequat blandit. In vulputate at urna vel fringilla.
+            Donec in ex malesuada, feugiat elit nec, posuere lacus. Donec a elit
+            cursus, placerat odio ornare, lobortis turpis. Aliquam vulputate a
+            nisi sit amet vehicula. Vivamus pulvinar tellus leo, cursus
+            fermentum nulla ultrices ultrices. Nullam nec purus dui. Sed in
+            lacinia elit. Donec facilisis pulvinar felis efficitur ultricies.
+            Donec nec ante massa. Praesent consectetur condimentum luctus.
+            Vivamus mattis dignissim augue, a placerat neque pharetra non.
+            Mauris commodo, lorem feugiat laoreet lacinia, nulla risus
+            ullamcorper tortor, sit amet fermentum leo orci vel ante.
+            Suspendisse potenti. Quisque in ante eget tortor volutpat hendrerit
+            quis et sem. Ut vehicula iaculis eros, at lobortis turpis pretium
+            eu. Fusce non lectus tellus. Curabitur vitae eros sollicitudin,
+            viverra urna lobortis, semper diam. Proin dictum libero tortor, nec
+            aliquet erat euismod in. Morbi varius mi vulputate arcu lacinia, sed
+            pulvinar dolor iaculis. Nunc convallis nisi in sem semper feugiat.
+            Curabitur malesuada lacus eu finibus blandit. Sed varius vulputate
+            interdum. Vestibulum ante dolor, convallis dapibus velit at,
+            volutpat fermentum quam. Donec congue tortor orci, at dapibus dui
+            lacinia eu. Quisque ornare, felis ac dictum suscipit, velit tortor
+            accumsan mauris, vitae convallis mi enim a leo. Suspendisse ut augue
+            in sem posuere rhoncus. Aliquam erat volutpat. Sed at arcu accumsan,
+            molestie elit vel, ornare elit. Proin nec erat ex. Mauris bibendum
+            auctor leo, sed egestas eros dictum fringilla. Nam bibendum nunc
+            eget rutrum volutpat. Donec quis eleifend diam. Sed maximus nisi nec
+            ante mattis, eget gravida nulla laoreet. Vivamus vitae efficitur
+            purus, ut sollicitudin nibh. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Veritatis reprehenderit deleniti exercitationem
+            impedit quidem quos officiis suscipit commodi, quia voluptatibus
+            unde magnam! Minus omnis a iste distinctio animi voluptates
+            dignissimos laudantium ad vitae natus. Eos facilis dolorem sunt
+            dicta consectetur consequuntur! Minus aliquam, quia ducimus fuga
+            quasi illum asperiores magni laborum magnam voluptatibus
+            exercitationem nam recusandae consectetur sed laboriosam assumenda,
+            doloremque eveniet mollitia deserunt amet dolorem necessitatibus
+            qui. Dolores nobis ipsum aliquam omnis officiis maxime quia ipsa
+            tenetur modi. Repellat eligendi vitae, iure eum in laudantium hic
+            iusto tempore! Esse error reprehenderit debitis pariatur. Tempora,
+            architecto, deserunt unde commodi magnam quisquam corrupti beatae
+            cumque explicabo libero esse! A ipsam placeat reiciendis maxime at
+            modi est inventore? Cum delectus sit assumenda eligendi odit dicta
+            at ut quis, autem iusto quo molestiae, nam, natus numquam odio
+            mollitia dignissimos impedit nemo architecto illo similique
+            obcaecati debitis? Aliquam error vitae odio consectetur similique,
+            nisi dolorem alias ab nihil sequi aperiam, pariatur tenetur
+            laudantium illo harum deleniti exercitationem! Fugit enim dicta
+            eaque debitis, explicabo delectus earum maxime possimus at quibusdam
+            quasi porro ab, dolor facilis aperiam id hic sed corrupti libero
+            perferendis iste necessitatibus veritatis ex. Eos accusamus numquam
+            maiores fuga dolores quos ab, quisquam amet itaque possimus, ex
+            voluptate repudiandae. Ab pariatur totam, nulla est rerum quas
+            beatae accusantium, laudantium possimus assumenda at blanditiis
+            fugiat impedit harum iste. Quas omnis obcaecati est perferendis
+            eaque quasi totam nam, voluptas natus repudiandae fugiat, a odit
+            molestias veritatis autem blanditiis doloremque? Earum atque dicta
+            adipisci? Iure reprehenderit sed quo deserunt. Architecto sunt qui
+            commodi enim vel autem, alias facilis aliquid fugit, error iusto
+            dignissimos atque omnis tenetur vero nostrum beatae minima! Optio
+            soluta dolor laudantium consequatur repudiandae ut obcaecati ipsum,
+            error sit porro rem labore corporis sint explicabo, non quae
+            excepturi neque dignissimos! Quibusdam incidunt nam, similique
+            reprehenderit eum explicabo tenetur iusto quia aperiam perferendis
+            earum neque cupiditate ratione, amet quidem, qui deleniti ipsum.
+            Autem, eveniet assumenda consectetur qui expedita nesciunt est nemo
+            aspernatur eos quidem officia optio necessitatibus delectus
+            accusantium alias magni molestiae obcaecati provident id? Ratione
+            pariatur ipsa ea atque vel minima placeat nihil expedita reiciendis
+            at et neque aliquid laboriosam numquam commodi inventore, velit est
+            fuga similique cum error? Id veritatis velit a maxime modi mollitia
+            aut consectetur similique voluptatem cum commodi, nobis aliquam.
+            Unde aspernatur non sed nesciunt, sint assumenda expedita,
+            architecto, corporis sequi officiis beatae. Ut maiores eum officia,
+            nemo necessitatibus itaque dolorum tempora minima magnam, in ratione
+            molestias illo repellat suscipit perferendis blanditiis reiciendis
+            eligendi, delectus accusamus unde voluptatum impedit? Corporis
+            soluta cum illo minus voluptatem, aliquid cupiditate modi
+            blanditiis, aperiam veritatis odit dolorem dolore doloribus
+            repudiandae repellendus libero cumque at doloremque, pariatur beatae
+            impedit culpa porro eaque labore. Veniam atque debitis placeat quis
+            facere. Assumenda, minus quis quam ipsam mollitia est asperiores,
+            architecto exercitationem consequuntur temporibus, eius explicabo
+            aperiam. Nemo possimus repudiandae, dignissimos sit laudantium
+            excepturi placeat eius culpa, impedit facilis reiciendis voluptatum
+            deleniti ea? Unde quia blanditiis quae! Nihil, beatae in laboriosam
+            doloribus explicabo dolor, architecto labore maxime eos, at
+            obcaecati sequi dignissimos? Vitae nisi voluptates neque saepe
+            eaque, praesentium id sunt accusamus quod. Repellat nostrum odio
+            error dolorum ea reprehenderit ducimus, illo quod obcaecati quisquam
+            ratione nobis optio, delectus rem dicta? Nobis, assumenda ut autem
+            a, perferendis aliquam aperiam beatae labore rem voluptates
+            provident corrupti perspiciatis dolore. Excepturi quod iste et
+            quibusdam, doloremque modi dolorem commodi non culpa aperiam impedit
+            animi incidunt ducimus perspiciatis, nesciunt iusto assumenda odit
+            quis, porro fugit tempora. Delectus nulla qui corrupti animi
+            deleniti ducimus sit ab illum enim ad magnam dolor expedita odio
+            alias, sapiente officia sed nihil facilis eligendi velit id
+            deserunt. Ipsum, vel debitis odio error placeat unde, nisi iure
+            enim, maxime molestias aliquam quia. Natus error odio maxime
+            reprehenderit vero in cumque culpa alias! Delectus architecto
+            numquam fugit illum sequi, esse unde ipsum quas veritatis tenetur
+            provident ab, et atque? Aliquam inventore natus, est labore facilis
+            error aut ad ab magnam voluptatum vitae, dolores dicta culpa ex
+            animi atque deserunt ipsa impedit, perspiciatis suscipit minus illo.
+            Voluptate enim accusamus porro! Autem molestiae laboriosam aut
+            eligendi, at harum. Perspiciatis laborum aliquam eaque cum.
+            Laboriosam, placeat quasi pariatur cum fugiat officia quod sunt et
+            consequuntur tenetur aspernatur quo dolores necessitatibus omnis
+            quis adipisci saepe recusandae voluptatibus veniam ipsa optio, ex
+            minus? Obcaecati magnam nisi eveniet aspernatur officiis recusandae
+            impedit possimus quod, facilis dolores aliquam. Iste eum modi nobis
+            quasi ea eos natus aut deleniti corporis corrupti laudantium vel in,
+            fugiat rerum possimus architecto facere doloremque quia numquam
+            tempore saepe quae magni. Commodi sequi fugiat nobis expedita
+            adipisci, iste, assumenda quaerat, earum labore iure autem obcaecati
+            culpa nisi neque vitae optio quisquam perferendis vero veritatis
+            debitis repellat qui similique totam impedit. Labore, reprehenderit?
+            Ut odio ab possimus ducimus reiciendis maxime mollitia aliquid? A,
+            corrupti voluptates excepturi odio commodi illum modi sed? Nisi esse
+            exercitationem voluptatibus dolor illum temporibus accusantium
+            commodi facere, dolore autem, ad debitis reiciendis, quam voluptatum
+            unde quae eos facilis iure veritatis id distinctio. Nemo ullam
+            excepturi facere vel? Ex temporibus blanditiis distinctio quod
+            doloremque fugit voluptates, dicta excepturi minima dolor earum at
+            mollitia quibusdam officia reiciendis illo quam harum accusamus
+            similique delectus necessitatibus! Esse, eveniet. Quidem quisquam
+            necessitatibus alias sint voluptas voluptate accusamus? Tempora
+            veritatis ipsam, esse incidunt nemo sed! Ut at numquam molestias
+            maxime! Aut id et sequi ipsa placeat aliquam iste quisquam cumque
+            culpa omnis. Voluptate ipsam quaerat obcaecati velit. Rerum, alias
+            tempore laboriosam quia debitis minus voluptates exercitationem
+            nesciunt provident deserunt reprehenderit explicabo nulla molestiae
+            dolore maiores sit ullam totam quam! Animi, voluptatum eaque fugit
+            pariatur harum maxime dicta fugiat, autem explicabo in ad commodi
+            quos veritatis quasi ullam, maiores vel minima modi! Nam, ducimus.
+            Rem facilis, odio numquam, iste reiciendis eveniet voluptatum fuga
+            cupiditate eligendi debitis quia obcaecati nesciunt pariatur minus,
+            harum ratione est asperiores cum veniam dolore modi maxime fugit.
+            Labore voluptas quasi veritatis magnam, a est rerum officia?
+            Perspiciatis dicta labore ipsam quis facere, a, optio dignissimos
+            vel officia neque enim dolor, quas quibusdam et corrupti quae iure
+            earum impedit voluptatem tempora quod adipisci?
+          </p>
+          <!-- More content here -->
         </div>
       </div>
-    </header>
+    </div>
+
+    <script>
+      document
+        .getElementById("openModalBtn")
+        .addEventListener("click", function () {
+          document.getElementById("myModal").style.display = "block";
+        });
+
+      document
+        .getElementsByClassName("close")[0]
+        .addEventListener("click", function () {
+          document.getElementById("myModal").style.display = "none";
+        });
+    </script>
   </body>
 </html>
