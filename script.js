@@ -37,7 +37,6 @@ burger.addEventListener("click", () => {
     healthGoal.style.transform = "translateX(-100%";
     productType.style.transform = "translateX(-100%";
     brands.style.transform = "translateX(-100%";
-    hideSearch.style.display = "none";
     mainNavbarInputHideable1.style.display = "flex";
     hideableSearchContainer.style.display = "flex";
   } else {
@@ -45,10 +44,11 @@ burger.addEventListener("click", () => {
     mobileMenu.style.display = "flex";
     main.style.display = "none";
     cartContainer.style.display = "none";
-    searchBar.style.transform = "translateX(-100%)";
+    searchBar.style.display = "translateX(-100%)";
     hideableSearchContainer.style.display = "flex";
     mainNavbarInputHideable1.style.display = "none";
     hideableSearchContainer.style.display = "none";
+    hideSearch.style.display = "none";
   }
 });
 
@@ -202,13 +202,12 @@ $(document).ready(function () {
 
 mainNavbarInput3.addEventListener("focus", () => {
   mainNavbarInput3.style.outline = "none";
-  inputElement.style.width = "60%";
+  mainNavbarInput3.style.width = "60%";
   searchClose.style.display = "block";
 });
 
 mainNavbarInput3.addEventListener("blur", () => {
   mainNavbarInput3.style.outline = "none";
-  inputElement.style.width = "60%"; // Reset width when focus is lost
   searchBar3.style.display = "block";
 });
 
@@ -217,4 +216,12 @@ searchClose3.addEventListener("click", function () {
   hideSearch.style.display = "block";
   cartCont.style.display = "flex";
   burger.style.display = "block";
+});
+
+let allModalImages = document.querySelectorAll(".photoswipe__image");
+
+allModalImages.forEach(function (modalImage) {
+  modalImage.addEventListener("click", function () {
+    alert("Clicked on Modal image");
+  });
 });

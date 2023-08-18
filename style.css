@@ -88,6 +88,7 @@ body {
 .main-navbar-main-logo {
   margin-left: 3rem;
   height: 90px;
+  cursor: pointer;
 }
 
 .main-navbar-logoPsearch {
@@ -213,21 +214,16 @@ select:focus {
 /* Hideable End */
 
 /* Main Navbar Search3 Styling Starts From Here*/
+#search-bar3 {
+  display: none;
+}
 .main-navbar-searchPbtn3 {
   align-self: center;
   display: flex;
 }
 
-#search-bar3 {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: var(--bg-clr-navbar);
-  padding-bottom: 1rem;
-}
 .main-navbar-input3 {
-  height: 45px;
+  height: 40px;
   width: 100%;
   padding-left: 8px;
   text-align: left;
@@ -248,12 +244,14 @@ select:focus {
 }
 .navbar-hide-search3 {
   display: none;
-  position: absolute;
-  top: 3vh;
-  right: 25%;
   width: 27px;
   height: 27px;
   cursor: pointer;
+}
+#searchClose3 {
+  display: none;
+  height: 32px;
+  width: 32px;
 }
 .main-navbar-btn3 {
   background-color: #fff;
@@ -269,6 +267,7 @@ select:focus {
   border: none;
   cursor: pointer;
   position: relative;
+  margin-left: 3rem;
 }
 
 /* Main Navbar Search3 Ends Here */
@@ -472,7 +471,7 @@ select:focus {
 #hamburger-icon {
   margin-left: 1rem;
   margin-right: 1rem;
-  /* margin-top: 2.4vh; */
+  margin-top: 2.4vh;
   display: none;
   cursor: pointer;
 }
@@ -876,39 +875,6 @@ select:focus {
   border: 1px solid silver;
   cursor: zoom-in;
 }
-/* .modal-single-carousel .slick-slide {
-  width: 100%;
-} */
-
-/* Styling on the Full Modal Content and the modal itself */
-/* Modal Styling */
-.new-modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.new-modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
-  display: block;
-}
-
-.new-modal-close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 /* Inner Modal Styling Ends Here */
 .product-single__title {
@@ -1217,10 +1183,13 @@ cite {
   font-weight: bold;
 }
 .slick-current .fader__text {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
+  /* box-shadow: 0px 0px 15px 10px rgba(0, 0, 5, 0.3); */
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 5, 0.9);  */
+  box-shadow: 5px 5px 10px rgba(0, 0, 5, 0.5), -5px 5px 10px rgba(0, 0, 5, 0.5),
+    0px 5px 10px rgba(0, 0, 5, 0.5);
   background-color: #fff;
 }
+
 .section8-img {
   height: 50px;
   width: 40px;
@@ -1540,15 +1509,8 @@ select:focus {
   }
   .main-navbar {
     position: relative;
-    /* height: 15vh; */
-    /* align-items: flex-start; */
     padding-top: 1rem;
   }
-  /* .main-navbar-cart-icon {
-    position: absolute;
-    top: 3vh;
-    right: 14%;
-  } */
   .main-navbar-close {
     position: absolute;
     top: 3vh;
