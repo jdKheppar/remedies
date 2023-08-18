@@ -76,8 +76,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 50px;
-        margin: 5px;
       }
 
       .section8-img {
@@ -279,9 +277,10 @@
           speed: 950,
           dots: true,
           arrows: false,
-          appendDots: $(".carousel-container"),
+
           initialSlide: 1, // Start from slide index 1
           centerMode: true, // Disable center mode
+          adaptiveHeight: true,
           responsive: [
             {
               breakpoint: 770, // When screen width is 770px or less
@@ -292,24 +291,6 @@
             },
           ],
         });
-
-        // Calculate and set the maximum height of visible slides
-        function setMaxSlideHeight() {
-          var maxSlideHeight = 0;
-          $(".slick-current .fader__text").each(function () {
-            var slideHeight = $(this).outerHeight();
-            if (slideHeight > maxSlideHeight) {
-              maxSlideHeight = slideHeight;
-            }
-          });
-          $(".slick-slide").css("height", maxSlideHeight + "px");
-        }
-
-        // Call the function when slick initializes and after slide change
-        $(".carousel-container").on(
-          "init reInit reInit setPosition",
-          setMaxSlideHeight
-        );
       });
     </script>
   </body>

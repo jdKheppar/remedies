@@ -43,7 +43,10 @@
         </div>
       </div>
       <div class="nav" id="nav">
-        <div class="main-navbar">
+        <div class="site-header__cart-empty" id="site-header">
+          Your cart is currently empty.
+        </div>
+        <div class="main-navbar" id="main-navbar">
           <div class="main-navbar-logoPsearch">
             <img
               class="main-navbar-main-logo"
@@ -56,6 +59,7 @@
                 type="text"
                 placeholder=" Search by products, brands or health goals"
                 class="main-navbar-input"
+                id="main-navbar-input"
               />
               <button class="main-navbar-btn">
                 <svg
@@ -89,6 +93,45 @@
                 />
               </button>
             </div>
+          </div>
+          <div class="main-navbar-searchPbtn3" id="search-bar3">
+            <input
+              type="text"
+              placeholder=" Search by products, brands or health goals"
+              class="main-navbar-input3"
+              id="main-navbar-input3"
+            />
+            <button class="main-navbar-btn3">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="main-navbar-search-icon3"
+                viewBox="0 0 64 64"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #000;
+                      stroke-miterlimit: 10;
+                      stroke-width: 2px;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="cls-1"
+                  d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"
+                ></path>
+              </svg>
+            </button>
+            <button class="main-navbar-close3" id="searchClose3">
+              <img
+                src="./assets/icons/close.png"
+                alt="close"
+                class="main-navbar-img-close3"
+              />
+            </button>
           </div>
           <svg
             aria-hidden="true"
@@ -185,6 +228,7 @@
                       />
                     </button>
                   </div>
+
                   <hr class="hamburger-hr" />
                   <div class="hamburger-dropdown">
                     <button
@@ -539,6 +583,50 @@
             </div>
           </div>
         </div>
+        <div class="hideable-search-container" id="hideable-search-container">
+          <div class="main-navbar-searchPbtn-hideable" id="search-bar-hideable">
+            <input
+              type="text"
+              placeholder=" Search by products, brands or health goals"
+              class="main-navbar-input-hideable"
+            />
+            <button class="main-navbar-btn-hideable">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="main-navbar-search-icon"
+                viewBox="0 0 64 64"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #000;
+                      stroke-miterlimit: 10;
+                      stroke-width: 2px;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="cls-1"
+                  d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"
+                ></path>
+              </svg>
+            </button>
+            <button
+              class="main-navbar-close-hideable"
+              id="searchClose-hideable"
+            >
+              <img
+                src="./assets/icons/close.png"
+                alt="close"
+                class="main-navbar-img-close-hideable"
+              />
+            </button>
+          </div>
+        </div>
+
         <hr id="header-hr" />
         <div class="main-dropdown" id="main-dropdown">
           <ul id="main-dropdown-ul">
@@ -712,9 +800,6 @@
     </header>
     <main id="main">
       <div class="main-img-container">
-        <div class="site-header__cart-empty" id="site-header">
-          Your cart is currently empty.
-        </div>
         <img
           class="main-img"
           src="./assets/imgs/mainHome.webp"
@@ -1074,10 +1159,26 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image lazyautosizes lazyloaded"
-                            src="./assets/imgs/modalImgs/2.webp"
-                          />
+                          <div class="modal-single-carousel">
+                            <div class="slide">
+                              <img
+                                class="photoswipe__image slide"
+                                src="./assets/imgs/modalImgs/2.webp"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                class="photoswipe__image slide"
+                                src="./assets/imgs/modalImgs/2a.webp"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                class="photoswipe__image slide"
+                                src="./assets/imgs/modalImgs/2b.jpg"
+                              />
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -1318,6 +1419,10 @@
                             class="photoswipe__image lazyautosizes lazyloaded"
                             src="./assets/imgs/modalImgs/3.webp"
                           />
+                          <div id="newMyModal3" class="new-modal">
+                            <span class="new-modal-close">&times;</span>
+                            <img class="new-modal-content" id="fullImage" />
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -3752,52 +3857,70 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="text/javascript">
-      $(".carousel-container").slick({
-        autoplay: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 950,
-        dots: true,
-        arrows: false,
-        centerMode: true,
-        initialSlide: 1, // Start from slide index 1
-        appendDots: $(".carousel-container"),
-        responsive: [
-          {
-            breakpoint: 770, // When screen width is 770px or less
-            settings: {
-              slidesToShow: 1, // Show only 1 slide
-              centerMode: false, // Disable center mode
+      $(document).ready(function () {
+        $(".carousel-container").slick({
+          autoplay: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          speed: 950,
+          dots: true,
+          arrows: false,
+          // appendDots: $(".carousel-container"),
+          initialSlide: 1, // Start from slide index 1
+          centerMode: true, // Disable center mode
+          //adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 770, // When screen width is 770px or less
+              settings: {
+                slidesToShow: 1, // Show only 1 slide
+                centerMode: false, // Disable center mode
+              },
             },
-          },
-        ],
-      });
-      $(".modal-single-carousel").slick({
-        autoplay: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 950,
-        arrows: true,
-        centerMode: true,
-      });
-
-      // Calculate and set the maximum height of visible slides
-      function setMaxSlideHeight() {
-        var maxSlideHeight = 0;
-        $(".slick-current .fader__text").each(function () {
-          var slideHeight = $(this).outerHeight();
-          if (slideHeight > maxSlideHeight) {
-            maxSlideHeight = slideHeight + 25;
-          }
+          ],
         });
-        $(".slick-slide").css("height", maxSlideHeight + "px");
-      }
+        // Open the modal with full-size image
+        $(".carousel-container").on("click", ".slide img", function () {
+          var fullSrc = $(this).attr("src"); // Get the source of the clicked image
+          $("#fullImage").attr("src", fullSrc); // Set the source of the modal image
+          $("#myModal").css("display", "block"); // Show the modal
+        });
 
-      // Call the function when slick initializes and after slide change
-      $(".carousel-container").on(
-        "init reInit reInit setPosition",
-        setMaxSlideHeight
-      );
+        // Close the modal
+        $(".close").click(function () {
+          $("#myModal").css("display", "none"); // Hide the modal
+        });
+
+        $(".modal-single-carousel").slick({
+          autoplay: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          speed: 950,
+          arrows: true,
+          dots: false,
+          centerMode: true,
+          //variableWidth: true,
+          adaptiveHeight: true,
+        });
+
+        // Calculate and set the maximum height of visible slides
+        function setMaxSlideHeight() {
+          var maxSlideHeight = 0;
+          $(".slick-current .fader__text").each(function () {
+            var slideHeight = $(this).outerHeight();
+            if (slideHeight > maxSlideHeight) {
+              maxSlideHeight = slideHeight + 25;
+            }
+          });
+          $(".slick-slide").css("height", maxSlideHeight + "px");
+        }
+
+        // Call the function when slick initializes and after slide change
+        $(".carousel-container").on(
+          "init reInit reInit setPosition",
+          setMaxSlideHeight
+        );
+      });
     </script>
     <script src="script.js"></script>
   </body>

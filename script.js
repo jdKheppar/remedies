@@ -1,5 +1,17 @@
 let topNavbar = document.getElementById("top-navbar");
 let searchBar = document.getElementById("search-bar");
+let searchBar3 = document.getElementById("search-bar3");
+let searchClose3 = document.getElementById("searchClose3");
+let mainNavbarInput3 = document.getElementById("main-navbar-input3");
+let mainNavbar = document.getElementById("main-navbar");
+const mainNavbarInput = document.getElementById("main-navbar-input");
+let mainNavbarHideableSearch1 = document.getElementById("searchClose-hideable");
+let hideableSearchContainer = document.getElementById(
+  "hideable-search-container"
+);
+let mainNavbarInputHideable1 = document.getElementById(
+  "main-navbar-input-hideable"
+);
 
 let hamburger = document.getElementById("hamburger-icon");
 let burger = document.getElementById("burger");
@@ -25,12 +37,18 @@ burger.addEventListener("click", () => {
     healthGoal.style.transform = "translateX(-100%";
     productType.style.transform = "translateX(-100%";
     brands.style.transform = "translateX(-100%";
+    hideSearch.style.display = "none";
+    mainNavbarInputHideable1.style.display = "flex";
+    hideableSearchContainer.style.display = "flex";
   } else {
     hamburger.classList.add("open");
     mobileMenu.style.display = "flex";
     main.style.display = "none";
     cartContainer.style.display = "none";
     searchBar.style.transform = "translateX(-100%)";
+    hideableSearchContainer.style.display = "flex";
+    mainNavbarInputHideable1.style.display = "none";
+    hideableSearchContainer.style.display = "none";
   }
 });
 
@@ -41,9 +59,9 @@ let cartMessage = document.getElementById("site-header");
 cartCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "none";
-    searchBar.style.display = "none";
+    hideSearch.style.display = "none";
   }
-  //cartCont.style.display = "none";
+  cartCont.style.display = "none";
   closeCont.style.display = "flex";
   cartMessage.style.display = "flex";
 });
@@ -51,10 +69,10 @@ cartCont.addEventListener("click", function () {
 closeCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "block";
-    searchBar.style.display = "flex";
+    hideSearch.style.display = "block";
   }
   closeCont.style.display = "none";
-  //cartCont.style.display = "flex";
+  cartCont.style.display = "flex";
   cartMessage.style.display = "none";
 });
 
@@ -84,20 +102,25 @@ function myFunction() {
     header.classList.add("sticky");
     if (window.innerWidth < 771) {
       hideSearch.style.display = "block";
-      searchBar.style.display = "none";
+      hideableSearchContainer.style.display = "none";
+
+      // r mainNavbar.style.height = "10vh";
     }
   } else {
     header.classList.remove("sticky");
 
     if (window.innerWidth < 771) {
       hideSearch.style.display = "none";
-      searchBar.style.display = "flex";
+      hideableSearchContainer.style.display = "flex";
+      // r mainNavbar.style.height = "15vh";
     }
   }
 }
 hideSearch.addEventListener("click", function () {
-  searchBar.style.display = "flex";
-  searchBar.style.bottom = "20px";
+  searchBar3.style.display = "flex";
+  searchBar3.style.marginTop = "1rem";
+  searchBar3.style.marginBottom = "1rem";
+  //searchBar.style.bottom = "20px";
   hideSearch.style.display = "none";
   mainNavbarMainLogo.style.display = "none";
   cartCont.style.display = "none";
@@ -146,7 +169,7 @@ closeButtons.forEach((closeButton) => {
   });
 });
 
-//For Handling plus minus on Modal
+//Jquery For Handling plus minus on Modal
 $(document).ready(function () {
   $(".modal-minus").click(function () {
     var $input = $(this).parent().find("input");
@@ -162,4 +185,36 @@ $(document).ready(function () {
     $input.change();
     return false;
   });
+});
+
+//Main Navbar Hideable Search Bar Before 770px
+// let search1Close = document.getElementById("searchClose-hideable");
+
+// search1Close.addEventListener("click", function () {
+//   mainNavbarInputHideable.style.width = "100%";
+//   search1Close.style.display = "none";
+// });
+// hideableSearchContainer.addEventListener("click", function () {
+//   mainNavbarInputHideable.style.width = "60%";
+//   search1Close.style.display = "block";
+//   search1Close.style.marginLeft = "30px";
+// });
+
+mainNavbarInput3.addEventListener("focus", () => {
+  mainNavbarInput3.style.outline = "none";
+  inputElement.style.width = "60%";
+  searchClose.style.display = "block";
+});
+
+mainNavbarInput3.addEventListener("blur", () => {
+  mainNavbarInput3.style.outline = "none";
+  inputElement.style.width = "60%"; // Reset width when focus is lost
+  searchBar3.style.display = "block";
+});
+
+searchClose3.addEventListener("click", function () {
+  mainNavbarMainLogo.style.display = "block";
+  hideSearch.style.display = "block";
+  cartCont.style.display = "flex";
+  burger.style.display = "block";
 });
