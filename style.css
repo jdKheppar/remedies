@@ -36,6 +36,9 @@ body {
 }
 
 /* Navbar */
+.nav {
+  position: relative;
+}
 
 /* Top Navbar */
 
@@ -58,19 +61,21 @@ body {
 }
 
 .top-navbar-icons {
-  margin-right: 4%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9%;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .top-navbar-icon-insta {
-  margin-right: 16%;
+  margin-right: 10%;
   height: 16px;
   width: 16px;
 }
 
-.top-navbar-icon-db {
+.top-navbar-icon-fb {
   height: 16px;
   width: 16px;
 }
@@ -96,8 +101,8 @@ body {
 }
 
 .main-navbar-searchPbtn {
-  align-self: center;
   display: flex;
+  align-self: center;
 }
 
 .main-navbar-input {
@@ -122,9 +127,6 @@ body {
 }
 .navbar-hide-search {
   display: none;
-  /* position: absolute;
-  top: 3vh;
-  right: 25%; */
   width: 27px;
   height: 27px;
   cursor: pointer;
@@ -143,6 +145,22 @@ body {
   border: none;
   cursor: pointer;
   position: relative;
+}
+.main-navbar-close-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.main-navbar-input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  width: 25vw;
+}
+.main-navbar-input:focus ~ .main-navbar-close {
+  margin-left: 75px;
+  display: block;
+  cursor: pointer;
 }
 /* Hideable SearchPbtn Styling Starts From Here*/
 .main-navbar-searchPbtn-hideable {
@@ -186,8 +204,8 @@ body {
   position: absolute;
   top: 3vh;
   right: 25%;
-  width: 27px;
-  height: 27px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 .main-navbar-btn-hideable {
@@ -203,13 +221,18 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  position: relative;
 }
 .main-navbar-input-hideable:focus,
 textarea:focus,
 select:focus {
   outline: none;
   width: 60%;
+}
+
+.main-navbar-input-hideable:focus ~ .main-navbar-close-hideable {
+  margin-left: 25px;
+  display: block;
+  cursor: pointer;
 }
 /* Hideable End */
 
@@ -218,6 +241,8 @@ select:focus {
   display: none;
 }
 .main-navbar-searchPbtn3 {
+  margin-left: 5%;
+  width: 100%;
   align-self: center;
   display: flex;
 }
@@ -276,8 +301,7 @@ select:focus {
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-right: 4%;
-  position: relative;
+  margin-right: 3.5%;
 }
 
 .main-navbar-cart-icon {
@@ -297,18 +321,6 @@ select:focus {
   margin-right: 4%;
 }
 
-.main-navbar-close-icon {
-  height: 32px;
-  width: 32px;
-  margin-right: 10px;
-}
-.main-navbar-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  width: 25vw;
-}
-
 .main-navbar-close-para {
   margin-right: 20px;
   color: var(--colorNavText);
@@ -320,25 +332,14 @@ select:focus {
   cursor: pointer;
 }
 
-.main-navbar-input:focus ~ .main-navbar-close {
-  margin-left: 75px;
-  display: block;
-  cursor: pointer;
-}
-.main-navbar-input-hideable:focus ~ .main-navbar-close-hideable {
-  margin-left: 25px;
-  display: block;
-  cursor: pointer;
-}
-
 /* Hr */
 
 #header-hr {
   border: none;
-  border-top: 0.5px solid #2e6e66;
+  border-top: 0.3px solid #2e6e66;
   margin: 0;
   padding: 0;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 90;
 }
 
@@ -359,8 +360,8 @@ select:focus {
   background-color: var(--bg-clr-navbar);
   color: #2e6e66;
   position: relative;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  /* padding-left: 1.5rem;
+  padding-right: 1.5rem; */
 }
 
 #shipping button {
@@ -386,10 +387,10 @@ select:focus {
 .dropbtn {
   background-color: var(--bg-clr-navbar);
   color: #2e6e66;
-  padding: 16px;
+  padding: 16px 14px;
   width: 100%;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   letter-spacing: 0.2rem;
@@ -578,11 +579,11 @@ select:focus {
   align-items: center;
   justify-content: center;
   height: 3.5rem;
-  width: 20%;
+  width: 30%;
   background-color: #fff;
   padding: 1rem 3rem;
   right: 5%;
-  top: 20vh;
+  top: 25vh;
   z-index: 5;
 }
 
@@ -1445,7 +1446,7 @@ select:focus {
     justify-content: space-between;
     /* flex-wrap: wrap; */
     font-weight: bold;
-    padding: 0.1rem 1.5rem;
+    /* padding: 0.1rem 1.5rem; */
   }
 
   .section11 {
@@ -1533,6 +1534,11 @@ select:focus {
   }
   #hideable-search-container {
     display: flex;
+  }
+  .main-navbar-cart {
+    position: absolute;
+    right: 9%;
+    top: 5vh;
   }
   .main-navbar-cart-para {
     display: none;

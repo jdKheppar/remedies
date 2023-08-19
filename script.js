@@ -1,4 +1,5 @@
 let topNavbar = document.getElementById("top-navbar");
+let hideSearch = document.getElementById("hide-search");
 let searchBar = document.getElementById("search-bar");
 let searchBar3 = document.getElementById("search-bar3");
 let searchClose3 = document.getElementById("searchClose3");
@@ -60,6 +61,7 @@ cartCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "none";
     hideSearch.style.display = "none";
+    hideableSearchContainer.style.display = "none";
   }
   cartCont.style.display = "none";
   closeCont.style.display = "flex";
@@ -69,7 +71,8 @@ cartCont.addEventListener("click", function () {
 closeCont.addEventListener("click", function () {
   if (window.innerWidth < 771) {
     burger.style.display = "block";
-    hideSearch.style.display = "block";
+    //hideSearch.style.display = "block";
+    hideableSearchContainer.style.display = "flex";
   }
   closeCont.style.display = "none";
   cartCont.style.display = "flex";
@@ -94,7 +97,7 @@ var sticky = header.offsetTop;
 let dropDown = document.getElementById("main-dropdown");
 let mainDDUL = document.getElementById("main-dropdown-ul");
 let healthGoalRight = document.getElementById("health-goal-right");
-let hideSearch = document.getElementById("hide-search");
+
 let mainNavbarMainLogo = document.getElementById("main-navbar-main-logo");
 
 function myFunction() {
@@ -203,12 +206,12 @@ $(document).ready(function () {
 mainNavbarInput3.addEventListener("focus", () => {
   mainNavbarInput3.style.outline = "none";
   mainNavbarInput3.style.width = "60%";
-  searchClose.style.display = "block";
+  searchClose3.style.display = "block";
 });
 
 mainNavbarInput3.addEventListener("blur", () => {
   mainNavbarInput3.style.outline = "none";
-  searchBar3.style.display = "block";
+  //searchBar3.style.display = "block";
 });
 
 searchClose3.addEventListener("click", function () {
@@ -216,6 +219,8 @@ searchClose3.addEventListener("click", function () {
   hideSearch.style.display = "block";
   cartCont.style.display = "flex";
   burger.style.display = "block";
+  mainNavbarInput3.style.width = "100%";
+  searchBar3.style.display = "none";
 });
 
 let allModalImages = document.querySelectorAll(".photoswipe__image");
