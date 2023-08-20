@@ -227,6 +227,6 @@ let allModalImages = document.querySelectorAll(".photoswipe__image");
 
 allModalImages.forEach(function (modalImage) {
   modalImage.addEventListener("click", function () {
-    alert("Clicked on Modal image");
+    console.log("Clicked on Modal image");
   });
 });

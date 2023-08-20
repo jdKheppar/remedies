@@ -997,17 +997,22 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <div class="modal-single-carousel">
+                          <div
+                            class="slider-single"
+                            data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'
+                          >
                             <div class="slide">
                               <img
                                 class="photoswipe__image slide"
                                 src="./assets/imgs/modalImgs/1.webp"
+                                alt="single 1"
                               />
                             </div>
                             <div class="slide">
                               <img
                                 class="photoswipe__image slide"
                                 src="./assets/imgs/modalImgs/1a.avif"
+                                alt="single 1a"
                               />
                             </div>
                           </div>
@@ -3804,7 +3809,7 @@
             class="section11-main-logo"
           />
           <div class="section11-logos">
-            <div class="imgPname">
+            <div class="imgPname" id="section11-easyReturns">
               <img
                 src="./assets/icons/easyReturns.png"
                 alt="returns"
@@ -3959,7 +3964,7 @@
     ></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".carousel-container").slick({
+        let $section8Carousel = $(".carousel-container").slick({
           autoplay: false,
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -3967,32 +3972,41 @@
           dots: true,
           arrows: false,
           // appendDots: $(".carousel-container"),
-          initialSlide: 1, // Start from slide index 1
-          centerMode: true, // Disable center mode
-          //adaptiveHeight: true,
+          initialSlide: 1,
+          centerMode: true,
+          adaptiveHeight: true,
+
           responsive: [
             {
               breakpoint: 770, // When screen width is 770px or less
               settings: {
-                slidesToShow: 1, // Show only 1 slide
-                centerMode: false, // Disable center mode
+                slidesToShow: 1,
+                centerMode: false,
               },
             },
           ],
         });
+        $section8Carousel.on("click", ".slide", function () {
+          // Get the index of the clicked slide
+          var index = $(this).index();
 
-        $(".modal-single-carousel").slick({
-          autoplay: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          speed: 950,
-          loop: false,
+          // Jump to the corresponding slide in the full screen carousel
+          $(".fullscreen-carousel").slick("slickGoTo", index);
+
+          // Show the full screen carousel
+          $(".fullscreen-carousel").show();
+        });
+
+        $(".slider-single").slick({
+          //slidesToShow: 1,
+          //slidesToScroll: 1,
+          //initialSlide: 0,
           arrows: true,
-          dots: false,
-          centerMode: false,
-          initialSlide: 1, // Start from slide index 1
-          //variableWidth: true,
-          //adaptiveHeight: true,
+          //fade: false,
+          dtos: false,
+          adaptiveHeight: true,
+          infinite: false,
+          //speed: 400,
         });
 
         // Calculate and set the maximum height of visible slides
@@ -4008,10 +4022,12 @@
         }
 
         // Call the function when slick initializes and after slide change
-        $(".carousel-container").on(
-          "init reInit reInit setPosition",
-          setMaxSlideHeight
-        );
+        if (window.innerWidth > 770) {
+          $(".carousel-container").on(
+            "init reInit reInit setPosition",
+            setMaxSlideHeight
+          );
+        }
       });
     </script>
     <script src="script.js"></script>

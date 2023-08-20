@@ -24,9 +24,6 @@
     ></script>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-      .section8-carousel {
-        background-color: #f2f2f2;
-      }
       .slick-dots {
         display: flex;
         justify-content: center;
@@ -34,228 +31,188 @@
         padding: 0;
       }
 
-      /* Style each dot */
       .slick-dots li {
         margin: 0 4px;
       }
 
-      /* Style the inactive dot */
       .slick-dots li button {
         font-size: 0;
         width: 10px;
-        /* Adjust the dot size */
         height: 10px;
-        /* Adjust the dot size */
-
-        /* Make the dot rounded */
         background-color: #ccc;
-        /* Set the dot color */
         border: none;
         border-radius: 100%;
-        /* Remove the border */
       }
 
-      /* Style the inactive dot */
       .slick-dots li button:hover {
         background-color: black;
       }
 
-      /* Style the active dot */
       .slick-dots li.slick-active button {
         background-color: black;
-        /* Set the active dot color */
         width: 12px;
-        /* Increase the active dot size */
+
         height: 12px;
         border-radius: 100%;
-        /* Increase the active dot size */
-      }
-
-      .fader__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
       }
 
       .section8-img {
         height: 50px;
         width: 40px;
       }
-      .slick-current {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+      /*Syncing Carousel Syling*/
+      body {
+        background-color: #aacccc;
+      }
+
+      .js .slider-single > div:nth-child(1n + 2) {
+        display: none;
+      }
+
+      .js .slider-single.slick-initialized > div:nth-child(1n + 2) {
+        display: block;
+      }
+
+      h3 {
+        background: #f0f0f0;
+        color: #3498db;
+        font-size: 2.25rem;
+        margin: 0.5rem;
+        padding: 2%;
+        position: relative;
+        text-align: center;
+      }
+
+      .slider-single h3 {
+        line-height: 10rem;
+      }
+
+      .slider-nav h3::before {
+        content: "";
+        display: block;
+        padding-top: 75%;
+      }
+
+      .slider-nav h3 span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .slider-nav .slick-slide {
+        cursor: pointer;
+      }
+
+      .slick-slide.is-active h3 {
+        color: #c00;
         background-color: #fff;
       }
     </style>
   </head>
+  <!--
+    .slick-current {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: #fff;
+      }
+     .slick-track {
 
+        width: 100%;
+      }
+      .slick-list {
+        width: 100%;
+      } -->
   <body>
-    <div class="section8-carousel slideshow-container carousel-container">
-      <div class="slide fade shadow-slide">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>
-              Been going to Remedies for years. Always a positive experience.
-              There is real healing there.
-            </p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Barbie Wools 1</cite>
-        </blockquote>
+    <div class="section8-carousel">
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          Been going to Remedies for years. Always a positive experience. There
+          is real healing there.
+        </p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Barbie Wools 1</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>Great people, great advice! And just lovely to visit with.</p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Cathy Howard 2</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          Great people, great advice! And just lovely to visit with.
+        </p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Cathy Howard 2</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>Great place to get natural herbs</p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Pentoda</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section-testimonial-stars">★★★★★</div>
+        <p class="section8-para">Great place to get natural herbs</p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Pentoda</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>Awesome!</p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Sammee G.</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="section8-para">Awesome!</p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Sammee G.</p>
       </div>
-      <div class="slide fade shadow-slide">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>Amazing!!!!!!</p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Colecia Whitaker</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">Amazing!!!!!!</p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Colecia Whitaker</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>Great experience</p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Clay Williams</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">Great experience</p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Clay Williams</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>
-              Love this shop! They have a great selection and Hannah was so
-              knowledgeable and so helpful. I'll definitely be shopping here
-              again! Knowledgeable staff! Great selection!
-            </p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Kayla Campbell</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          Love this shop! They have a great selection and Hannah was so
+          knowledgeable and so helpful. I'll definitely be shopping here again!
+          Knowledgeable staff! Great selection!
+        </p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Kayla Campbell</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>
-              I have been dealing with arthritis in my neck since 2009....when
-              it flares up it is debilitating for appx 24 hours....after talking
-              with Dane and Chelsea about it Dane recommended some product that
-              really works!!! It started relieving my pain within 20 minutes and
-              was totally gone within 3 hours!!!! Thank you Dane and Chelsea for
-              your knowledge and great products!!!!
-            </p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Bobby Shock</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          I have been dealing with arthritis in my neck since 2009....when it
+          flares up it is debilitating for appx 24 hours....after talking with
+          Dane and Chelsea about it Dane recommended some product that really
+          works!!! It started relieving my pain within 20 minutes and was
+          totally gone within 3 hours!!!! Thank you Dane and Chelsea for your
+          knowledge and great products!!!!
+        </p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Bobby Shock</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>
-              I cannot say enough about how helpful they are in helping us
-              select the best possible supplements. please give them a try, you
-              won't regret it!
-            </p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Joshua Nicholas Costner</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          I cannot say enough about how helpful they are in helping us select
+          the best possible supplements. please give them a try, you won't
+          regret it!
+        </p>
+
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Joshua Nicholas Costner</p>
       </div>
-      <div class="slide fade">
-        <blockquote class="fader__text">
-          <span class="testimonial-stars">★★★★★</span>
-          <div class="rte-setting text-spacing">
-            <p>
-              These remedies can do what conventional medicine is not able to do
-              sometimes. They are also an assist for healthy living that we
-              cannot always get through our food. They have been so helpful to
-              me in the past as a way to recover after treatment or as a way to
-              avoid conventional treatment and prescription.&nbsp; There is room
-              in medicine for both conventional and alternative.&nbsp; I'm so
-              thankful that you are carrying on Barry's legacy.
-            </p>
-          </div>
-          <div class="testimonail-image--round">
-            <div>
-              <img class="section8-img" src="./assets/imgs/section8.png" />
-            </div>
-          </div>
-          <cite>Melvin Howard</cite>
-        </blockquote>
+      <div class="section8-slide">
+        <div class="section8-testimonial-stars">★★★★★</div>
+        <p class="section8-para">
+          These remedies can do what conventional medicine is not able to do
+          sometimes. They are also an assist for healthy living that we cannot
+          always get through our food. They have been so helpful to me in the
+          past as a way to recover after treatment or as a way to avoid
+          conventional treatment and prescription.&nbsp; There is room in
+          medicine for both conventional and alternative.&nbsp; I'm so thankful
+          that you are carrying on Barry's legacy.
+        </p>
+        <img class="section8-img" src="./assets/imgs/section8.png" />
+        <p class="section8-userName">Melvin Howard</p>
       </div>
     </div>
 
@@ -270,28 +227,105 @@
     <script type="text/javascript">
       // initialize the slick function
       $(document).ready(function () {
-        $(".carousel-container").slick({
-          autoplay: false,
-          slidesToShow: 3,
+        $(".slider-single").slick({
+          slidesToShow: 1,
           slidesToScroll: 1,
-          speed: 950,
-          dots: true,
-          arrows: false,
-
-          initialSlide: 1, // Start from slide index 1
-          centerMode: true, // Disable center mode
+          arrows: true,
+          fade: false,
           adaptiveHeight: true,
-          responsive: [
-            {
-              breakpoint: 770, // When screen width is 770px or less
-              settings: {
-                slidesToShow: 1, // Show only 1 slide
-                centerMode: false, // Disable center mode
+          infinite: false,
+          useTransform: true,
+          speed: 400,
+          cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
+        });
+
+        $(".slider-nav")
+          .on("init", function (event, slick) {
+            $(".slider-nav .slick-slide.slick-current").addClass("is-active");
+          })
+          .slick({
+            slidesToShow: 7,
+            slidesToScroll: 7,
+            dots: false,
+            focusOnSelect: false,
+            infinite: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 5,
+                },
               },
-            },
-          ],
+              {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+                },
+              },
+              {
+                breakpoint: 420,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                },
+              },
+            ],
+          });
+
+        $(".slider-single").on(
+          "afterChange",
+          function (event, slick, currentSlide) {
+            $(".slider-nav").slick("slickGoTo", currentSlide);
+            var currrentNavSlideElem =
+              '.slider-nav .slick-slide[data-slick-index="' +
+              currentSlide +
+              '"]';
+            $(".slider-nav .slick-slide.is-active").removeClass("is-active");
+            $(currrentNavSlideElem).addClass("is-active");
+          }
+        );
+
+        $(".slider-nav").on("click", ".slick-slide", function (event) {
+          event.preventDefault();
+          var goToSingleSlide = $(this).data("slick-index");
+
+          $(".slider-single").slick("slickGoTo", goToSingleSlide);
         });
       });
     </script>
   </body>
 </html>
+
+<!-- <div id="page">
+	<div class="row">
+		<div class="column small-11 small-centered">
+			<h2>Slick Slider Syncing</h2>
+			<div class="slider slider-single">
+				<div><h3>1</h3></div>
+				<div><h3>2</h3></div>
+				<div><h3>3</h3></div>
+				<div><h3>4</h3></div>
+				<div><h3>5</h3></div>
+				<div><h3>6</h3></div>
+				<div><h3>7</h3></div>
+				<div><h3>8</h3></div>
+				<div><h3>9</h3></div>
+				<div><h3>10</h3></div>
+			</div>
+			<div class="slider slider-nav">
+				<div><h3><span>1</span></h3></div>
+				<div><h3><span>2</span></h3></div>
+				<div><h3><span>3</span></h3></div>
+				<div><h3><span>4</span></h3></div>
+				<div><h3><span>5</span></h3></div>
+				<div><h3><span>6</span></h3></div>
+				<div><h3><span>7</span></h3></div>
+				<div><h3><span>8</span></h3></div>
+				<div><h3><span>9</span></h3></div>
+				<div><h3><span>10</span></h3></div>
+			</div>
+		</div>
+	</div>
+</div> -->

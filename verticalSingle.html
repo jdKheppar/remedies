@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slick carousel</title>
+
+    <!-- For Styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      jquery
+      library
+      --
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+
+      .slick-dots li {
+        margin: 0 4px;
+      }
+
+      .slick-dots li button {
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 100%;
+      }
+
+      .slick-dots li button:hover {
+        background-color: black;
+      }
+
+      .slick-dots li.slick-active button {
+        background-color: black;
+        width: 12px;
+
+        height: 12px;
+        border-radius: 100%;
+      }
+
+      .section8-img {
+        height: 50px;
+        width: 40px;
+      }
+      .slick-current {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal-body-container-left">
+      <div class="slider-single">
+        <div class="slide">
+          <img
+            class="photoswipe__image slide"
+            src="./assets/imgs/modalImgs/1.webp"
+            alt="single 1"
+          />
+        </div>
+        <div class="slide">
+          <img
+            class="photoswipe__image slide"
+            src="./assets/imgs/modalImgs/1a.avif"
+            alt="single 1a"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- // For script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript">
+      // initialize the slick function
+      $(document).ready(function () {
+        $(".slider-single").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: false,
+          adaptiveHeight: true,
+          infinite: false,
+          speed: 400,
+        });
+      });
+    </script>
+  </body>
+</html>
