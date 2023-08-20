@@ -172,6 +172,25 @@ closeButtons.forEach((closeButton) => {
   });
 });
 
+//For Inner Modal
+
+const innerOpenModalButtons = document.querySelectorAll(".inner-openModalBtn");
+
+innerOpenModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("inner-data-modal");
+    document.getElementById(modalId).style.display = "block";
+  });
+});
+
+const innerCloseButtons = document.querySelectorAll(".inner-close");
+
+innerCloseButtons.forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    closeButton.closest(".inner-modal").style.display = "none";
+  });
+});
+
 //Jquery For Handling plus minus on Modal
 $(document).ready(function () {
   $(".modal-minus").click(function () {
@@ -221,12 +240,4 @@ searchClose3.addEventListener("click", function () {
   burger.style.display = "block";
   mainNavbarInput3.style.width = "100%";
   searchBar3.style.display = "none";
-});
-
-let allModalImages = document.querySelectorAll(".photoswipe__image");
-
-allModalImages.forEach(function (modalImage) {
-  modalImage.addEventListener("click", function () {
-    console.log("Clicked on Modal image");
-  });
 });

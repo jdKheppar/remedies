@@ -1003,17 +1003,70 @@
                           >
                             <div class="slide">
                               <img
-                                class="photoswipe__image slide"
+                                inner-data-modal="inner-myModal1"
+                                class="photoswipe__image slide inner-openModalBtn"
                                 src="./assets/imgs/modalImgs/1.webp"
                                 alt="single 1"
                               />
                             </div>
                             <div class="slide">
                               <img
-                                class="photoswipe__image slide"
+                                inner-data-modal="inner-myModal1"
+                                class="photoswipe__image slide inner-openModalBtn"
                                 src="./assets/imgs/modalImgs/1a.avif"
                                 alt="single 1a"
                               />
+                            </div>
+                          </div>
+                          <div id="inner-myModal1" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div
+                                  class="inner-slider-single"
+                                  data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'
+                                >
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal1"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/1.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal1"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/1a.avif"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3998,12 +4051,23 @@
         });
 
         $(".slider-single").slick({
-          //slidesToShow: 1,
-          //slidesToScroll: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           //initialSlide: 0,
           arrows: true,
           //fade: false,
           dtos: false,
+          adaptiveHeight: true,
+          infinite: false,
+          //speed: 400,
+        });
+        $(".inner-slider-single").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          //initialSlide: 0,
+          arrows: true,
+          //fade: false,
+          dots: false,
           adaptiveHeight: true,
           infinite: false,
           //speed: 400,
