@@ -35,9 +35,9 @@ burger.addEventListener("click", () => {
     mobileMenu.style.display = "none";
     cartContainer.style.display = "block";
     searchBar.style.transform = "translateX(0)";
-    healthGoal.style.transform = "translateX(-100%";
-    productType.style.transform = "translateX(-100%";
-    brands.style.transform = "translateX(-100%";
+    healthGoal.style.transform = "translateX(100%)";
+    productType.style.transform = "translateX(100%)";
+    brands.style.transform = "translateX(100%)";
     mainNavbarInputHideable1.style.display = "flex";
     hideableSearchContainer.style.display = "flex";
   } else {
@@ -106,12 +106,11 @@ function myFunction() {
     if (window.innerWidth < 771) {
       hideSearch.style.display = "block";
       hideableSearchContainer.style.display = "none";
-
-      // r mainNavbar.style.height = "10vh";
     }
+    dropDown.style.height = "auto";
   } else {
     header.classList.remove("sticky");
-
+    dropDown.style.height = "10vh";
     if (window.innerWidth < 771) {
       hideSearch.style.display = "none";
       hideableSearchContainer.style.display = "flex";
@@ -146,13 +145,20 @@ function hamburgerInner(n) {
   }
 }
 
-function hamburgerInnerBtn() {
+function hamburgerInnerBtn1() {
   mobileMenu.style.display = "flex";
   healthGoal.style.transform = "translateX(100%)";
+}
+function hamburgerInnerBtn2() {
+  mobileMenu.style.display = "flex";
+
   productType.style.transform = "translateX(100%)";
+}
+function hamburgerInnerBtn3() {
+  mobileMenu.style.display = "flex";
+
   brands.style.transform = "translateX(100%)";
 }
-
 // For handling the Modal
 
 const openModalButtons = document.querySelectorAll(".openModalBtn");

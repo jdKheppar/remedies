@@ -375,7 +375,7 @@
                 <div class="hamburger-sub-inner">
                   <div
                     class="hamburger-inner-head"
-                    onclick="hamburgerInnerBtn()"
+                    onclick="hamburgerInnerBtn1()"
                   >
                     <img
                       class="less-than hamburger-inner-head-item"
@@ -471,7 +471,7 @@
                 <div class="hamburger-sub-inner">
                   <div
                     class="hamburger-inner-head"
-                    onclick="hamburgerInnerBtn()"
+                    onclick="hamburgerInnerBtn2()"
                   >
                     <img
                       class="less-than hamburger-inner-head-item"
@@ -566,7 +566,7 @@
                 <div class="hamburger-sub-inner">
                   <div
                     class="hamburger-inner-head"
-                    onclick="hamburgerInnerBtn()"
+                    onclick="hamburgerInnerBtn3()"
                   >
                     <img
                       class="less-than hamburger-inner-head-item"
@@ -999,7 +999,7 @@
                         <div class="modal-body-container-left">
                           <div
                             class="slider-single"
-                            data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'
+                            data-slick='{"slidesToShow": 1}'
                           >
                             <div class="slide">
                               <img
@@ -1021,10 +1021,7 @@
                           <div id="inner-myModal1" class="inner-modal">
                             <div class="inner-modal-content">
                               <div class="inner-modal-body">
-                                <div
-                                  class="inner-slider-single"
-                                  data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'
-                                >
+                                <div class="inner-slider-single">
                                   <div class="slide">
                                     <img
                                       inner-data-modal="inner-myModal1"
@@ -1071,143 +1068,149 @@
                           </div>
                         </div>
                         <div class="modal-body-container-right">
-                          <p class="h2 product-single__title">
-                            Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian
-                            Capsules
-                          </p>
-                          <div class="product-single__vendor-sku">
-                            <span class="product-single__vendor underline"
-                              >Natural Factors</span
-                            ><span class="product-single__sku">
-                              SKU: <span data-sku-id="">1294</span>
-                            </span>
+                          <div class="modal-body-container-right-inner">
+                            <p class="h2 product-single__title">
+                              Natural Factors- Vitamin K2- 100 mcg- 60
+                              Vegetarian Capsules
+                            </p>
+                            <div class="product-single__vendor-sku">
+                              <span class="product-single__vendor underline"
+                                >Natural Factors</span
+                              ><span class="product-single__sku">
+                                SKU: <span data-sku-id="">1294</span>
+                              </span>
+                            </div>
+                            <p>Price</p>
+                            <p class="price">
+                              $17<sup class="subscript">95</sup>
+                            </p>
+                            <p class="modal-quantity">Quantity</p>
+                            <div class="modal-number">
+                              <span class="modal-minus">-</span>
+                              <input
+                                type="text"
+                                value="1"
+                                class="modal-input"
+                              />
+                              <span class="modal-plus">+</span>
+                            </div>
+                            <div class="sales_points">
+                              <div class="sales_point">
+                                <span class="icon-and-text">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="icon icon-globe"
+                                    viewBox="0 0 64 64"
+                                  >
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          fill: none;
+                                          stroke: #000;
+                                          stroke-width: 2px;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <circle
+                                      class="cls-1"
+                                      cx="33"
+                                      cy="32"
+                                      r="22"
+                                    ></circle>
+                                    <path
+                                      class="cls-1"
+                                      d="M14 21h38M11 32h44M14 43h38M33 10c-12 8-12 37 0 44M33 10c12 8 12 37 0 44"
+                                    ></path>
+                                  </svg>
+
+                                  <span>Free shipping on orders over $49</span>
+                                </span>
+                              </div>
+
+                              <div class="sales_point">
+                                <span class="icon-and-text">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="icon icon-circle-checkmark"
+                                    viewBox="0 0 64 64"
+                                  >
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          fill: none;
+                                          stroke: #000;
+                                          stroke-width: 2px;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <path
+                                      class="cls-1"
+                                      d="M52.68 24.48A22 22 0 1 1 47 15.93M21 32l8.5 8.5L57 13"
+                                    ></path>
+                                  </svg>
+
+                                  <span>Hassle free returns</span>
+                                </span>
+                              </div>
+
+                              <div class="sales_point">
+                                <span class="icon-and-text">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="icon icon-lock"
+                                    viewBox="0 0 64 64"
+                                  >
+                                    <defs>
+                                      <style>
+                                        .cls-1 {
+                                          fill: none;
+                                          stroke: #000;
+                                          stroke-width: 2px;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <path
+                                      id="svg_2"
+                                      data-name="svg 2"
+                                      class="cls-1"
+                                      d="M20.48 24v-3c0-6.6 5.52-11 11.76-11C39 10 44 15.13 44 21v3"
+                                    ></path>
+                                    <path
+                                      id="svg_4"
+                                      data-name="svg 4"
+                                      class="cls-1"
+                                      d="M11.62 24h41.25v29.77H11.62z"
+                                    ></path>
+                                    <path class="cls-1" d="M32.24 37v7"></path>
+                                    <circle
+                                      class="cls-1"
+                                      cx="32.24"
+                                      cy="35.5"
+                                      r="1.5"
+                                    ></circle>
+                                  </svg>
+
+                                  <span>Secure payments</span>
+                                </span>
+                              </div>
+
+                              <div class="sales_point">
+                                <span class="icon-and-text inventory--low">
+                                  <span class="icon icon--inventory"></span>
+                                  <span>Only 3 items in stock </span>
+                                </span>
+                              </div>
+                            </div>
+                            <button class="btn btn--full add-to-cart">
+                              Add to cart
+                            </button>
                           </div>
-                          <p>Price</p>
-                          <p class="price">
-                            $17<sup class="subscript">95</sup>
-                          </p>
-                          <p class="modal-quantity">Quantity</p>
-                          <div class="modal-number">
-                            <span class="modal-minus">-</span>
-                            <input type="text" value="1" class="modal-input" />
-                            <span class="modal-plus">+</span>
-                          </div>
-                          <div class="sales_points">
-                            <div class="sales_point">
-                              <span class="icon-and-text">
-                                <svg
-                                  aria-hidden="true"
-                                  focusable="false"
-                                  role="presentation"
-                                  class="icon icon-globe"
-                                  viewBox="0 0 64 64"
-                                >
-                                  <defs>
-                                    <style>
-                                      .cls-1 {
-                                        fill: none;
-                                        stroke: #000;
-                                        stroke-width: 2px;
-                                      }
-                                    </style>
-                                  </defs>
-                                  <circle
-                                    class="cls-1"
-                                    cx="33"
-                                    cy="32"
-                                    r="22"
-                                  ></circle>
-                                  <path
-                                    class="cls-1"
-                                    d="M14 21h38M11 32h44M14 43h38M33 10c-12 8-12 37 0 44M33 10c12 8 12 37 0 44"
-                                  ></path>
-                                </svg>
-
-                                <span>Free shipping on orders over $49</span>
-                              </span>
-                            </div>
-
-                            <div class="sales_point">
-                              <span class="icon-and-text">
-                                <svg
-                                  aria-hidden="true"
-                                  focusable="false"
-                                  role="presentation"
-                                  class="icon icon-circle-checkmark"
-                                  viewBox="0 0 64 64"
-                                >
-                                  <defs>
-                                    <style>
-                                      .cls-1 {
-                                        fill: none;
-                                        stroke: #000;
-                                        stroke-width: 2px;
-                                      }
-                                    </style>
-                                  </defs>
-                                  <path
-                                    class="cls-1"
-                                    d="M52.68 24.48A22 22 0 1 1 47 15.93M21 32l8.5 8.5L57 13"
-                                  ></path>
-                                </svg>
-
-                                <span>Hassle free returns</span>
-                              </span>
-                            </div>
-
-                            <div class="sales_point">
-                              <span class="icon-and-text">
-                                <svg
-                                  aria-hidden="true"
-                                  focusable="false"
-                                  role="presentation"
-                                  class="icon icon-lock"
-                                  viewBox="0 0 64 64"
-                                >
-                                  <defs>
-                                    <style>
-                                      .cls-1 {
-                                        fill: none;
-                                        stroke: #000;
-                                        stroke-width: 2px;
-                                      }
-                                    </style>
-                                  </defs>
-                                  <path
-                                    id="svg_2"
-                                    data-name="svg 2"
-                                    class="cls-1"
-                                    d="M20.48 24v-3c0-6.6 5.52-11 11.76-11C39 10 44 15.13 44 21v3"
-                                  ></path>
-                                  <path
-                                    id="svg_4"
-                                    data-name="svg 4"
-                                    class="cls-1"
-                                    d="M11.62 24h41.25v29.77H11.62z"
-                                  ></path>
-                                  <path class="cls-1" d="M32.24 37v7"></path>
-                                  <circle
-                                    class="cls-1"
-                                    cx="32.24"
-                                    cy="35.5"
-                                    r="1.5"
-                                  ></circle>
-                                </svg>
-
-                                <span>Secure payments</span>
-                              </span>
-                            </div>
-
-                            <div class="sales_point">
-                              <span class="icon-and-text inventory--low">
-                                <span class="icon icon--inventory"></span>
-                                <span>Only 3 items in stock </span>
-                              </span>
-                            </div>
-                          </div>
-                          <button class="btn btn--full add-to-cart">
-                            Add to cart
-                          </button>
                         </div>
                       </div>
 
@@ -1309,24 +1312,83 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <div class="modal-single-carousel">
+                          <div class="slider-single">
                             <div class="slide">
                               <img
-                                class="photoswipe__image slide"
+                                inner-data-modal="inner-myModal2"
+                                class="photoswipe__image slide inner-openModalBtn"
                                 src="./assets/imgs/modalImgs/2.webp"
                               />
                             </div>
                             <div class="slide">
                               <img
-                                class="photoswipe__image slide"
+                                inner-data-modal="inner-myModal2"
+                                class="photoswipe__image slide inner-openModalBtn"
                                 src="./assets/imgs/modalImgs/2a.webp"
                               />
                             </div>
                             <div class="slide">
                               <img
-                                class="photoswipe__image slide"
+                                inner-data-modal="inner-myModal2"
+                                class="photoswipe__image slide inner-openModalBtn"
                                 src="./assets/imgs/modalImgs/2b.jpg"
                               />
+                            </div>
+                          </div>
+                          <div id="inner-myModal2" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal1"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/2.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal1"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/2a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal1"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/2b.jpg"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1575,14 +1637,48 @@
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
                           <img
-                            class="photoswipe__image"
+                            inner-data-modal="inner-myModal3"
+                            class="photoswipe__image slide inner-openModalBtn"
                             src="./assets/imgs/modalImgs/3.webp"
+                            alt="single "
                           />
-                          <div id="newMyModal3" class="new-modal">
-                            <span class="new-modal-close">&times;</span>
-                            <img class="new-modal-content" id="fullImage" />
+                          <div id="inner-myModal3" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <img
+                                  class="photoswipe__image slide"
+                                  src="./assets/imgs/modalImgs/3.webp"
+                                  alt="single "
+                                />
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                         </div>
+
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
                             Natural Factors- Vitamin K2- 100 mcg- 60 Vegetarian
@@ -1818,10 +1914,70 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/4.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal4"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/4.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal4"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/4a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal4" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      class="photoswipe__image slide"
+                                      src="./assets/imgs/modalImgs/4.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      class="photoswipe__image slide"
+                                      src="./assets/imgs/modalImgs/4a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -2059,10 +2215,72 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/5.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal5"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/5.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal5"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/5a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal5" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal5"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/5.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal5"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/5a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -2267,7 +2485,7 @@
         <section class="section4">
           <div class="section4-left-content">
             <h1>Check out our bestselling "Dr. Barry's" product line!</h1>
-            <p>
+            <p class="">
               Our father drew on his knowledge as an herbalist to create
               individual remedies for the customers at his health food store.
               Quickly, these custom formulations became known and sought after
@@ -2327,10 +2545,72 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/1.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal6"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/6.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal6"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/6a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal6" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal6"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/6.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal6"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/6a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -2570,15 +2850,71 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <div class="modal-single-carousel">
-                            <img
-                              class="photoswipe__image slide"
-                              src="./assets/imgs/modalImgs/1.webp"
-                            />
-                            <img
-                              class="photoswipe__image slide"
-                              src="./assets/imgs/modalImgs/1.webp"
-                            />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal7"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/7.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal7"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/7a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal7" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal5"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/7.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal7"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/7a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <div class="modal-body-container-right">
@@ -2816,10 +3152,72 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/1.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal8"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/8.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal8"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/8a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal8" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal8"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/8.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal8"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/8a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -3056,10 +3454,72 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/9.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal9"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/9.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal9"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/9a.avif"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal9" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal9"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/9.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal9"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/9a.avif"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -3297,10 +3757,72 @@
                     <div class="modal-body-container">
                       <div class="modal-body-container-top">
                         <div class="modal-body-container-left">
-                          <img
-                            class="photoswipe__image"
-                            src="./assets/imgs/modalImgs/10.webp"
-                          />
+                          <div class="slider-single">
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal10"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/10.webp"
+                                alt="single 1"
+                              />
+                            </div>
+                            <div class="slide">
+                              <img
+                                inner-data-modal="inner-myModal10"
+                                class="photoswipe__image slide inner-openModalBtn"
+                                src="./assets/imgs/modalImgs/10a.webp"
+                                alt="single 1a"
+                              />
+                            </div>
+                          </div>
+                          <div id="inner-myModal10" class="inner-modal">
+                            <div class="inner-modal-content">
+                              <div class="inner-modal-body">
+                                <div class="inner-slider-single">
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal10"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/10.webp"
+                                      alt="single 1"
+                                    />
+                                  </div>
+                                  <div class="slide">
+                                    <img
+                                      inner-data-modal="inner-myModal10"
+                                      class="photoswipe__image slide inner-openModalBtn"
+                                      src="./assets/imgs/modalImgs/10a.webp"
+                                      alt="single 1a"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="inner-close">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="icon icon-close"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 2px;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <path
+                                    class="cls-1"
+                                    d="M19 17.61l27.12 27.13m0-27.13L19 44.74"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-body-container-right">
                           <p class="h2 product-single__title">
@@ -3846,7 +4368,7 @@
               </p>
             </div>
             <div class="section10-container-right">
-              <video class="section10-right-video" controls="controls">
+              <video class="section10-right-video" controls="controls" autoplay>
                 <source
                   src="./assets/video/TaglineAnimation.mp4"
                   type="video/mp4"
@@ -3917,7 +4439,7 @@
             />
           </div>
           <div class="footer-container-item touch">
-            <h4 class="footer-container-heading">GET IN TOUCH</h4>
+            <div class="footer-container-heading">GET IN TOUCH</div>
             <div class="footer-touch-item">
               <img
                 src="./assets/icons/mail.png"
@@ -3944,7 +4466,7 @@
             </div>
           </div>
           <div class="footer-container-item support">
-            <h4 class="footer-container-heading">SUPPORT</h4>
+            <div class="footer-container-heading">SUPPORT</div>
             <div class="footer-support-item">
               <p>Shipping Information</p>
             </div>
@@ -3953,7 +4475,7 @@
             </div>
           </div>
           <div class="footer-container-item links">
-            <h4>QUICK LINKS</h4>
+            <div class="footer-container-heading">QUICK LINKS</div>
             <div class="footer-quick-item">
               <p>Privacy Policy</p>
             </div>
@@ -3965,7 +4487,7 @@
             </div>
           </div>
           <div class="footer-container-item accept">
-            <h4 class="footer-container-heading">WE ACCEPT</h4>
+            <div class="footer-container-heading accept-heading">WE ACCEPT</div>
             <div class="footer-accept-items">
               <img
                 src="./assets/icons/footerIcons/vector7.svg"
@@ -4039,8 +4561,8 @@
             },
           ],
         });
-        $section8Carousel.on("click", ".slide", function () {
-          // Get the index of the clicked slide
+        /*  $section8Carousel.on("click", ".slide", function () {
+          
           var index = $(this).index();
 
           // Jump to the corresponding slide in the full screen carousel
@@ -4048,7 +4570,7 @@
 
           // Show the full screen carousel
           $(".fullscreen-carousel").show();
-        });
+        });*/
 
         $(".slider-single").slick({
           slidesToShow: 1,
@@ -4058,7 +4580,9 @@
           //fade: false,
           dtos: false,
           adaptiveHeight: true,
-          infinite: false,
+          infinite: true,
+          prevArrow: "<img src='./assets/icons/greater-left.png'>",
+          nextArrow: "<img src='./assets/icons/greater-right.png'>",
           //speed: 400,
         });
         $(".inner-slider-single").slick({
@@ -4069,8 +4593,31 @@
           //fade: false,
           dots: false,
           adaptiveHeight: true,
-          infinite: false,
+          infinite: true,
+
+          nextArrow:
+            "<img class='greaterInner' src='./assets/icons/greater-inner.png'>",
+          prevArrow:
+            "<img class='lessInner' src='./assets/icons/less-inner.png'> ",
+
           //speed: 400,
+        });
+        // $(".inner-slider-single").css("height", $(window).height() + "px");
+
+        $(".slider-for").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: ".slider-for",
+          dots: true,
+          centerMode: true,
+          focusOnSelect: true,
         });
 
         // Calculate and set the maximum height of visible slides
@@ -4079,7 +4626,7 @@
           $(".slick-current .fader__text").each(function () {
             var slideHeight = $(this).outerHeight();
             if (slideHeight > maxSlideHeight) {
-              maxSlideHeight = slideHeight + 25;
+              maxSlideHeight = slideHeight + 20;
             }
           });
           $(".slick-slide").css("height", maxSlideHeight + "px");
