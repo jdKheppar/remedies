@@ -1267,6 +1267,7 @@ select:focus {
 .slick-dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
 }
@@ -1277,11 +1278,16 @@ select:focus {
 
 .slick-dots li button {
   font-size: 0;
-  width: 9px;
-  height: 9px;
   background-color: #ccc;
   border: none;
   border-radius: 100%;
+
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 100%;
+
+  padding: 2.8px;
 }
 
 /* inactive dot */
@@ -1292,8 +1298,8 @@ select:focus {
 /* active dot */
 .slick-dots li.slick-active button {
   background-color: black;
-  width: 10px;
-  height: 10px;
+  width: 9.5px;
+  height: 9.5px;
   border-radius: 100%;
 }
 
